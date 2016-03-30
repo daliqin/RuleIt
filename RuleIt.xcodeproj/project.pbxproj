@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		363E3BA51CAC4F6800ECAAB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */; };
+		363E3BA71CAC4F6800ECAAB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E3BA61CAC4F6800ECAAB9 /* ViewController.swift */; };
+		363E3BAA1CAC4F6800ECAAB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363E3BA81CAC4F6800ECAAB9 /* Main.storyboard */; };
+		363E3BAD1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 363E3BAB1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld */; };
+		363E3BAF1CAC4F6800ECAAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363E3BAE1CAC4F6800ECAAB9 /* Assets.xcassets */; };
+		363E3BB21CAC4F6800ECAAB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363E3BB01CAC4F6800ECAAB9 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		363E3BA11CAC4F6800ECAAB9 /* RuleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		363E3BA61CAC4F6800ECAAB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		363E3BA91CAC4F6800ECAAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		363E3BAC1CAC4F6800ECAAB9 /* RuleIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RuleIt.xcdatamodel; sourceTree = "<group>"; };
+		363E3BAE1CAC4F6800ECAAB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		363E3BB11CAC4F6800ECAAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		363E3BB31CAC4F6800ECAAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		363E3B9E1CAC4F6800ECAAB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		363E3B981CAC4F6800ECAAB9 = {
+			isa = PBXGroup;
+			children = (
+				363E3BA31CAC4F6800ECAAB9 /* RuleIt */,
+				363E3BA21CAC4F6800ECAAB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		363E3BA21CAC4F6800ECAAB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				363E3BA11CAC4F6800ECAAB9 /* RuleIt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		363E3BA31CAC4F6800ECAAB9 /* RuleIt */ = {
+			isa = PBXGroup;
+			children = (
+				363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */,
+				363E3BA61CAC4F6800ECAAB9 /* ViewController.swift */,
+				363E3BA81CAC4F6800ECAAB9 /* Main.storyboard */,
+				363E3BAE1CAC4F6800ECAAB9 /* Assets.xcassets */,
+				363E3BB01CAC4F6800ECAAB9 /* LaunchScreen.storyboard */,
+				363E3BB31CAC4F6800ECAAB9 /* Info.plist */,
+				363E3BAB1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld */,
+			);
+			path = RuleIt;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		363E3BA01CAC4F6800ECAAB9 /* RuleIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 363E3BB61CAC4F6800ECAAB9 /* Build configuration list for PBXNativeTarget "RuleIt" */;
+			buildPhases = (
+				363E3B9D1CAC4F6800ECAAB9 /* Sources */,
+				363E3B9E1CAC4F6800ECAAB9 /* Frameworks */,
+				363E3B9F1CAC4F6800ECAAB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuleIt;
+			productName = RuleIt;
+			productReference = 363E3BA11CAC4F6800ECAAB9 /* RuleIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		363E3B991CAC4F6800ECAAB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "RuleIt Inc.";
+				TargetAttributes = {
+					363E3BA01CAC4F6800ECAAB9 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 363E3B9C1CAC4F6800ECAAB9 /* Build configuration list for PBXProject "RuleIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 363E3B981CAC4F6800ECAAB9;
+			productRefGroup = 363E3BA21CAC4F6800ECAAB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				363E3BA01CAC4F6800ECAAB9 /* RuleIt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		363E3B9F1CAC4F6800ECAAB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363E3BB21CAC4F6800ECAAB9 /* LaunchScreen.storyboard in Resources */,
+				363E3BAF1CAC4F6800ECAAB9 /* Assets.xcassets in Resources */,
+				363E3BAA1CAC4F6800ECAAB9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		363E3B9D1CAC4F6800ECAAB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363E3BAD1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld in Sources */,
+				363E3BA71CAC4F6800ECAAB9 /* ViewController.swift in Sources */,
+				363E3BA51CAC4F6800ECAAB9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		363E3BA81CAC4F6800ECAAB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				363E3BA91CAC4F6800ECAAB9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		363E3BB01CAC4F6800ECAAB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				363E3BB11CAC4F6800ECAAB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		363E3BB41CAC4F6800ECAAB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		363E3BB51CAC4F6800ECAAB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		363E3BB71CAC4F6800ECAAB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RuleIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		363E3BB81CAC4F6800ECAAB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RuleIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		363E3B9C1CAC4F6800ECAAB9 /* Build configuration list for PBXProject "RuleIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				363E3BB41CAC4F6800ECAAB9 /* Debug */,
+				363E3BB51CAC4F6800ECAAB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		363E3BB61CAC4F6800ECAAB9 /* Build configuration list for PBXNativeTarget "RuleIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				363E3BB71CAC4F6800ECAAB9 /* Debug */,
+				363E3BB81CAC4F6800ECAAB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		363E3BAB1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				363E3BAC1CAC4F6800ECAAB9 /* RuleIt.xcdatamodel */,
+			);
+			currentVersion = 363E3BAC1CAC4F6800ECAAB9 /* RuleIt.xcdatamodel */;
+			path = RuleIt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 363E3B991CAC4F6800ECAAB9 /* Project object */;
+}
