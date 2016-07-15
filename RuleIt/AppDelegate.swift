@@ -8,21 +8,88 @@
 
 import UIKit
 import CoreData
+import Fabric
+import Crashlytics
+
+
+protocol Foregrounder {
+    func resumeFromBackground(appDelegate : AppDelegate)
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //static let sharedInstance = AppDelegate()
+    //private init() {} //This prevents others from using the default '()' initializer for this class.
+
+    
     var window: UIWindow?
-
-
+    var foregrounder: Foregrounder?
+    var countdownTimer: NSTimer? = NSTimer()
+    var displayClockTimer : NSTimer? = NSTimer()
+    var refreshClock : NSTimer? = NSTimer()
+    var workTimeValue : Int = 0
+    var restTimeValue : Int = 0
+    var timeleft: Double = 0
+    var isTimerActive: Bool = false
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    var autoSwitch = false
+    var isStartPressed = false
+    var isNewSession = true
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("workTime") == nil {
+            workTimeValue = 30
+        } else {
+            workTimeValue = (NSUserDefaults.standardUserDefaults().objectForKey("workTime")?.integerValue!)!
+        }
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("restTime") == nil {
+            restTimeValue = 10
+        } else {
+            restTimeValue = (NSUserDefaults.standardUserDefaults().objectForKey("restTime")?.integerValue!)!
+        }
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("btnSoundSwitchState") == nil {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "btnSoundSwitchState")
+        }
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("btnSoundSwitchState") == nil {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "btnSoundSwitchState")
+        }
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("volumeBar") == nil {
+            NSUserDefaults.standardUserDefaults().setFloat(0.5, forKey: "volumeBar")
+        }
+        
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        NSThread.sleepForTimeInterval(1.2);
+        
+        Fabric.with([Crashlytics.self])
+
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
+        let suspendedTimeSpot = NSDate()
+        userDefaults.setValue(suspendedTimeSpot, forKey: "TimeSpot")
+        
+        if isTimerActive && isStartPressed && timeleft != 0 {
+      
+            let notification = UILocalNotification()
+            notification.fireDate = NSDate(timeIntervalSinceNow: timeleft)
+            notification.alertBody = "Times up! Respond to start next phase"
+            notification.soundName = "beepLong.wav"
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            //isNewSession = false
+        }
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -36,6 +103,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        
+        foregrounder?.resumeFromBackground(self)
+        NSNotificationCenter.defaultCenter().postNotificationName("comebackFromSuspendidStateID", object: nil)
+
     }
 
     func applicationWillTerminate(application: UIApplication) {
