@@ -72,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
 
         return true ///
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
