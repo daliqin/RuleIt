@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B12A63E1D23A2B700BEAEA2 /* Instructions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B12A63D1D23A2B700BEAEA2 /* Instructions.framework */; };
-		2B12A63F1D23A2B700BEAEA2 /* Instructions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B12A63D1D23A2B700BEAEA2 /* Instructions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B2F683E1CFE6E9A009FC076 /* stop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F683D1CFE6E9A009FC076 /* stop.wav */; };
 		2B2F68441CFE7270009FC076 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F68431CFE7270009FC076 /* beep.wav */; };
 		2B2F68481CFE97CF009FC076 /* next.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F68471CFE97CF009FC076 /* next.wav */; };
@@ -77,6 +76,8 @@
 		36C4756C1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756A1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf */; };
 		36C4756D1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */; };
 		4749EEA0AC05E5609239CAE4 /* Pods_RuleIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */; };
+		D66670791D467866003392F8 /* Instructions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66670781D467866003392F8 /* Instructions.framework */; };
+		D666707A1D467CC3003392F8 /* Instructions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D66670781D467866003392F8 /* Instructions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,7 +87,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2B12A63F1D23A2B700BEAEA2 /* Instructions.framework in Embed Frameworks */,
+				D666707A1D467CC3003392F8 /* Instructions.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +170,7 @@
 		36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFATSKEW.ttf; sourceTree = "<group>"; };
 		4BCF8D96A6CEC6EFC51521B6 /* Pods-RuleIt.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.distribution.xcconfig"; sourceTree = "<group>"; };
 		4D75911BDB18911EDDAD3477 /* Pods-RuleIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.release.xcconfig"; sourceTree = "<group>"; };
+		D66670781D467866003392F8 /* Instructions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instructions.framework; path = "../../../Library/Developer/Xcode/DerivedData/RuleIt-fpfiieykwladecctljdrfaormkcy/Build/Products/Debug-iphoneos/Instructions.framework"; sourceTree = "<group>"; };
 		FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuleIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4749EEA0AC05E5609239CAE4 /* Pods_RuleIt.framework in Frameworks */,
+				D66670791D467866003392F8 /* Instructions.framework in Frameworks */,
 				2B12A63E1D23A2B700BEAEA2 /* Instructions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +248,7 @@
 				3680D4A31CB460DF00C55381 /* Icons */,
 				3680D4D91CB5A3CA00C55381 /* Supporting files */,
 				2B12A63D1D23A2B700BEAEA2 /* Instructions.framework */,
+				D66670781D467866003392F8 /* Instructions.framework */,
 			);
 			path = RuleIt;
 			sourceTree = "<group>";
