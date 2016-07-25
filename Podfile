@@ -6,6 +6,8 @@ target 'RuleIt' do
   use_frameworks!
 
   # Pods for RuleIt
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'Instructions', '~> 0.4'
   pod 'ChameleonFramework/Swift'
   pod 'Fabric'
   pod 'Crashlytics'
