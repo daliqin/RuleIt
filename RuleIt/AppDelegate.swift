@@ -56,8 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "btnSoundSwitchState")
         }
         
-        if NSUserDefaults.standardUserDefaults().objectForKey("btnSoundSwitchState") == nil {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "btnSoundSwitchState")
+        if NSUserDefaults.standardUserDefaults().objectForKey("autoSwitchState") == nil {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "autoSwitchState")
         }
         
         if NSUserDefaults.standardUserDefaults().objectForKey("volumeBar") == nil {

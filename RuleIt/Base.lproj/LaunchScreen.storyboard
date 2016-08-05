@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,28 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HEK-Fv-K0Y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="K4H-j9-pbI">
-                                <rect key="frame" x="146" y="293" width="82" height="82"/>
+                                <rect key="frame" x="126" y="273" width="122" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="K4H-j9-pbI" secondAttribute="height" multiplier="1:1" id="3WZ-mC-npx"/>
-                                    <constraint firstAttribute="height" constant="82" id="7XI-xS-U22"/>
-                                    <constraint firstAttribute="width" constant="82" id="vjf-ti-lPJ"/>
+                                    <constraint firstAttribute="height" constant="122" id="7XI-xS-U22"/>
+                                    <constraint firstAttribute="width" constant="122" id="vjf-ti-lPJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="HEK-Fv-K0Y" secondAttribute="trailing" id="DKk-t7-fE1"/>
-                            <constraint firstItem="HEK-Fv-K0Y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="O55-VG-fJV"/>
-                            <constraint firstItem="HEK-Fv-K0Y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="URb-tz-0uf"/>
                             <constraint firstItem="K4H-j9-pbI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bE8-KZ-56L"/>
                             <constraint firstItem="K4H-j9-pbI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="0.5" id="bwd-Yq-uIy"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="HEK-Fv-K0Y" secondAttribute="bottom" id="dwe-pj-cGQ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -51,6 +42,5 @@
     </scenes>
     <resources>
         <image name="Logo.png" width="875" height="799"/>
-        <image name="launchBG.jpg" width="1920" height="1200"/>
     </resources>
 </document>

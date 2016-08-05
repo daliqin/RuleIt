@@ -166,6 +166,10 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunched")
         }
         
+        autoSwitch = NSUserDefaults.standardUserDefaults().boolForKey("autoSwitchState")
+        autoSwitch ? autoSwitchBtn.setImage(UIImage(named: "autoSwitchColored.png"), forState: UIControlState.Normal) :
+                     autoSwitchBtn.setImage(UIImage(named: "autoSwitch.png"), forState: UIControlState.Normal)
+
         btnSoundEffect = NSUserDefaults.standardUserDefaults().boolForKey("btnSoundSwitchState")
         UIApplication.sharedApplication().idleTimerDisabled = NSUserDefaults.standardUserDefaults().boolForKey("screenLitSwitchState")
 
@@ -518,6 +522,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         if !autoSwitch {
             
             autoSwitch = true
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "autoSwitchState")
             autoSwitchBtn.setImage(UIImage(named: "autoSwitchColored.png"), forState: UIControlState.Normal)
             status.text = "auto switch on"
             status.textColor = UIColor.orangeColor()
@@ -525,6 +530,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         } else {
             
             autoSwitch = false
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "autoSwitchState")
             autoSwitchBtn.setImage(UIImage(named: "autoSwitch.png"), forState: UIControlState.Normal)
             status.text = "auto switch off"
             status.textColor = UIColor.orangeColor()
