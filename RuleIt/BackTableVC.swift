@@ -73,13 +73,13 @@ class BackTableVC: UITableViewController {
 // MARK: table view header
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "T:Infinity"
+        return "I.V.ELITE"
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
        
         let title = self.tableView(tableView, titleForHeaderInSection: section)
-        if (title == "T:Infinity") {
+        if (title == "I.V.ELITE") {
             return 45.0
         }
         return 15.0
@@ -95,7 +95,7 @@ class BackTableVC: UITableViewController {
 //    // MARK: table view footer
 //    
 //    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        return "Once you \nmaster time,\nyou master\nyourself"
+//        return "To /nyour /nsuccess"
 //    }
 //    
 //    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

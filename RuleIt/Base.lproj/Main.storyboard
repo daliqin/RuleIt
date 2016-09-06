@@ -75,7 +75,7 @@
         <!--Back TableVC-->
         <scene sceneID="lai-uB-zvn">
             <objects>
-                <tableViewController id="hhz-VA-cw5" customClass="BackTableVC" customModule="Time_Infinity" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hhz-VA-cw5" customClass="BackTableVC" customModule="Interval_Timer_Elite" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="w7U-Rb-8aO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
         <!--Right ViewVC-->
         <scene sceneID="SJx-IQ-f7c">
             <objects>
-                <viewController storyboardIdentifier="rightVC" id="H84-pY-5ZX" customClass="RightViewVC" customModule="Time_Infinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightVC" id="H84-pY-5ZX" customClass="RightViewVC" customModule="Interval_Timer_Elite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nDR-cN-7zH"/>
                         <viewControllerLayoutGuide type="bottom" id="vbe-qR-euv"/>
@@ -303,7 +303,7 @@
         <!--Settings-->
         <scene sceneID="GvJ-xH-tGo">
             <objects>
-                <tableViewController id="7Jk-eP-ehQ" customClass="Settings" customModule="Time_Infinity" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7Jk-eP-ehQ" customClass="Settings" customModule="Interval_Timer_Elite" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="J3D-0w-xho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +400,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7iV-Fb-Cou">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Buttons cheatsheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7iV-Fb-Cou">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -416,7 +416,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="version 1.1" id="Ouo-bA-Usn">
+                            <tableViewSection footerTitle="version 1.3" id="Ouo-bA-Usn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8zn-1B-eja" style="IBUITableViewCellStyleDefault" id="gsR-jS-EFT">
                                         <rect key="frame" x="0.0" y="283" width="375" height="44"/>
@@ -425,7 +425,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About Time Infinity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="8zn-1B-eja">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About Interval Timer Elite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="8zn-1B-eja">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -463,10 +463,10 @@
             </objects>
             <point key="canvasLocation" x="674.5" y="1688.5"/>
         </scene>
-        <!--About Time Infinity-->
+        <!--About Inverval Timer Elite-->
         <scene sceneID="ssA-ca-Wbo">
             <objects>
-                <viewController id="jcH-Bo-Cb0" customClass="about" customModule="Time_Infinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jcH-Bo-Cb0" customClass="about" customModule="Interval_Timer_Elite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qxL-KT-lYf"/>
                         <viewControllerLayoutGuide type="bottom" id="gzb-3D-X4Z"/>
@@ -476,21 +476,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNH-8a-FqK">
-                                <rect key="frame" x="47" y="78" width="280" height="434"/>
+                                <rect key="frame" x="47" y="117" width="280" height="434"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="434" id="H7x-Wp-cKQ"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Version 1.1">
+                                    <fragment content="Version 1.3">
                                         <attributes>
                                             <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-Medium"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cgo
+CgoKA
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -498,7 +498,14 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Time Infinity ">
+                                    <fragment content="Interval Timer Elite">
+                                        <attributes>
+                                            <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="HelveticaNeue-CondensedBold"/>
@@ -512,7 +519,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="is developed by a young engineer ">
+                                    <fragment content="is developed by engineer ">
                                         <attributes>
                                             <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
@@ -522,7 +529,7 @@ Cgo
                                     <fragment content="Dali Charles Qin">
                                         <attributes>
                                             <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-CondensedBold"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -544,45 +551,30 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment>
-                                        <string key="content">Need help? 
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="send email to: Time.Infinity@yahoo.com">
-                                        <attributes>
-                                            <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BnP-LO-U47">
+                                <rect key="frame" x="153" y="117" width="68" height="65"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="1XJ-5W-5g5"/>
+                                    <constraint firstAttribute="width" secondItem="BnP-LO-U47" secondAttribute="height" multiplier="68:65" id="KhB-6P-oMV"/>
+                                    <constraint firstAttribute="height" constant="65" id="ni8-vJ-bfP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="zNH-8a-FqK" firstAttribute="top" secondItem="BnP-LO-U47" secondAttribute="bottom" constant="-65" id="AE9-hv-SzB"/>
                             <constraint firstAttribute="trailing" secondItem="zNH-8a-FqK" secondAttribute="trailing" constant="48" id="bb9-gF-5BS"/>
                             <constraint firstItem="zNH-8a-FqK" firstAttribute="centerX" secondItem="dc1-JW-ycb" secondAttribute="centerX" id="g3t-zU-01p"/>
-                            <constraint firstItem="zNH-8a-FqK" firstAttribute="top" secondItem="qxL-KT-lYf" secondAttribute="bottom" constant="34" id="jZx-p3-1rX"/>
+                            <constraint firstItem="zNH-8a-FqK" firstAttribute="top" secondItem="qxL-KT-lYf" secondAttribute="bottom" constant="73" id="jZx-p3-1rX"/>
                             <constraint firstItem="zNH-8a-FqK" firstAttribute="leading" secondItem="dc1-JW-ycb" secondAttribute="leading" constant="47" id="v3p-0r-jWS"/>
+                            <constraint firstItem="BnP-LO-U47" firstAttribute="centerX" secondItem="dc1-JW-ycb" secondAttribute="centerX" id="yM3-RY-GLU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About Time Infinity" id="O3D-Y1-8ry"/>
+                    <navigationItem key="navigationItem" title="About Inverval Timer Elite" id="O3D-Y1-8ry"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfV-zd-ERW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -640,7 +632,7 @@ Cg
         <!--ACTION-->
         <scene sceneID="vKT-TK-q2z">
             <objects>
-                <tableViewController storyboardIdentifier="action" id="ePB-HH-X6U" customClass="Action" customModule="Time_Infinity" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="action" id="ePB-HH-X6U" customClass="Action" customModule="Interval_Timer_Elite" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Txv-G4-5JH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -665,7 +657,7 @@ Cg
                                                         <constraint firstAttribute="width" constant="275" id="LhQ-xk-ohZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Areas of improvments">
+                                                    <state key="normal" title="Feedback">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -694,18 +686,6 @@ Cg
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hII-im-KNb">
-                                                    <rect key="frame" x="48" y="107" width="279" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="279" id="2Wx-fu-QxN"/>
-                                                        <constraint firstAttribute="height" constant="30" id="Xra-6a-z4b"/>
-                                                        <constraint firstAttribute="width" secondItem="hII-im-KNb" secondAttribute="height" multiplier="217:30" constant="62" id="mpE-Gx-9OY"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Send the app to a friend">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-dV-pAG">
                                                     <rect key="frame" x="167" y="59" width="40" height="40"/>
                                                     <constraints>
@@ -714,9 +694,21 @@ Cg
                                                         <constraint firstAttribute="height" constant="40" id="zGP-IQ-8dz"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hII-im-KNb">
+                                                    <rect key="frame" x="48" y="107" width="279" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="279" id="2Wx-fu-QxN"/>
+                                                        <constraint firstAttribute="height" constant="35" id="Xra-6a-z4b"/>
+                                                        <constraint firstAttribute="width" secondItem="hII-im-KNb" secondAttribute="height" multiplier="217:30" constant="25.833333333333343" id="mpE-Gx-9OY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <state key="normal" title="Share The App">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hII-im-KNb" firstAttribute="centerY" secondItem="CiA-dN-Rda" secondAttribute="centerY" constant="22.5" id="OpW-pK-aaO"/>
+                                                <constraint firstItem="hII-im-KNb" firstAttribute="centerY" secondItem="CiA-dN-Rda" secondAttribute="centerY" constant="24.75" id="OpW-pK-aaO"/>
                                                 <constraint firstItem="hII-im-KNb" firstAttribute="centerX" secondItem="CiA-dN-Rda" secondAttribute="centerX" id="Tjb-pg-Oy6"/>
                                                 <constraint firstItem="hII-im-KNb" firstAttribute="top" secondItem="QpT-dV-pAG" secondAttribute="bottom" constant="8" id="idR-Ck-keh"/>
                                                 <constraint firstItem="QpT-dV-pAG" firstAttribute="centerX" secondItem="CiA-dN-Rda" secondAttribute="centerX" id="m7K-F5-2Op"/>
@@ -739,24 +731,48 @@ Cg
                                                         <constraint firstAttribute="width" constant="279" id="Uqk-4t-1kf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Rate me on App Store">
+                                                    <state key="normal" title="Your Rating For The App">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-DU-0WP">
-                                                    <rect key="frame" x="167" y="58" width="40" height="40"/>
+                                                    <rect key="frame" x="134" y="68" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="GRx-DU-0WP" secondAttribute="height" multiplier="1:1" id="Cbd-9n-DFv"/>
-                                                        <constraint firstAttribute="width" constant="40" id="NBI-rr-Grx"/>
-                                                        <constraint firstAttribute="height" constant="40" id="don-xo-Bi5"/>
+                                                        <constraint firstAttribute="height" constant="30" id="9nj-rM-N0g"/>
+                                                        <constraint firstAttribute="width" secondItem="GRx-DU-0WP" secondAttribute="height" multiplier="1:1" id="FBM-eB-BMg"/>
+                                                        <constraint firstAttribute="width" constant="30" id="pwQ-f6-XUU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="euz-xS-54H">
+                                                    <rect key="frame" x="210" y="68" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="4We-i6-sE9"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="kDL-bB-tQT"/>
+                                                        <constraint firstAttribute="width" secondItem="euz-xS-54H" secondAttribute="height" multiplier="1:1" id="kVK-PP-Jeg"/>
+                                                        <constraint firstAttribute="width" secondItem="euz-xS-54H" secondAttribute="height" multiplier="1:1" id="kYp-p2-cjg"/>
+                                                        <constraint firstAttribute="height" constant="30" id="lYn-Vy-nVz"/>
+                                                        <constraint firstAttribute="width" constant="30" id="pty-0p-qwr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="FF1-1X-dRW">
+                                                    <rect key="frame" x="172" y="68" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="9x9-tX-DTr"/>
+                                                        <constraint firstAttribute="width" secondItem="FF1-1X-dRW" secondAttribute="height" multiplier="1:1" id="Dpb-hF-oA4"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Qyp-Jp-V6k"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GRx-DU-0WP" firstAttribute="centerX" secondItem="lAD-Je-Rjy" secondAttribute="centerX" id="Jfo-x3-1qR"/>
+                                                <constraint firstItem="FF1-1X-dRW" firstAttribute="centerX" secondItem="lAD-Je-Rjy" secondAttribute="centerX" id="BUx-qR-IFg"/>
+                                                <constraint firstItem="Bm5-FV-WDs" firstAttribute="top" secondItem="FF1-1X-dRW" secondAttribute="bottom" constant="8" id="DJl-17-tO2"/>
+                                                <constraint firstItem="Bm5-FV-WDs" firstAttribute="top" secondItem="GRx-DU-0WP" secondAttribute="bottom" constant="8" id="FLa-Mn-8Cx"/>
+                                                <constraint firstItem="Bm5-FV-WDs" firstAttribute="top" secondItem="euz-xS-54H" secondAttribute="bottom" constant="8" id="MlJ-6k-ax1"/>
                                                 <constraint firstItem="Bm5-FV-WDs" firstAttribute="centerX" secondItem="lAD-Je-Rjy" secondAttribute="centerX" id="dHJ-ff-Hx7"/>
-                                                <constraint firstItem="Bm5-FV-WDs" firstAttribute="top" secondItem="GRx-DU-0WP" secondAttribute="bottom" constant="8" id="gUG-r1-G93"/>
+                                                <constraint firstItem="euz-xS-54H" firstAttribute="leading" secondItem="FF1-1X-dRW" secondAttribute="trailing" constant="8" id="v8H-5P-joE"/>
                                                 <constraint firstItem="Bm5-FV-WDs" firstAttribute="centerY" secondItem="lAD-Je-Rjy" secondAttribute="centerY" constant="24" id="x7V-5r-bDb"/>
+                                                <constraint firstItem="euz-xS-54H" firstAttribute="width" secondItem="euz-xS-54H" secondAttribute="height" multiplier="1:1" id="xAO-I4-JND"/>
+                                                <constraint firstItem="FF1-1X-dRW" firstAttribute="leading" secondItem="GRx-DU-0WP" secondAttribute="trailing" constant="8" id="yRO-j7-h6Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -817,7 +833,7 @@ Cg
         <!--View Controller-->
         <scene sceneID="tLe-H8-cfj">
             <objects>
-                <viewController id="yax-8t-Vm9" customClass="ViewController" customModule="Time_Infinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yax-8t-Vm9" customClass="ViewController" customModule="Interval_Timer_Elite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kjJ-im-zSb"/>
                         <viewControllerLayoutGuide type="bottom" id="JvA-mu-P97"/>
@@ -828,7 +844,7 @@ Cg
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-iy-BFY">
                                 <rect key="frame" x="1" y="64" width="375" height="362"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40266702586206898" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.54818030568971288" green="0.55549619830086516" blue="0.57282804319371727" alpha="0.15114331132306186" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="74"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1130,6 +1146,7 @@ Cg
                             <color key="tintColor" red="0.0" green="1" blue="1" alpha="0.56527478448275859" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <keyCommands/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1160,6 +1177,7 @@ Cg
         </scene>
     </scenes>
     <resources>
+        <image name="Logo.png" width="875" height="799"/>
         <image name="Play.png" width="100" height="100"/>
         <image name="Time-64.png" width="64" height="64"/>
         <image name="add1m.png" width="46" height="50"/>
