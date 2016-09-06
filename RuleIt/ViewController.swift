@@ -70,12 +70,12 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     let pointOfInterest = UIView()
     var coachMarksController: CoachMarksController?
     
-    let workTimeText = "Welcome!😎 Super quick walk-through! \nTimer is going to jump between 2 modes:  \nWORKING 💪 and RESTING 😪. \n\nHere is your work mode duration, which can be changed later. When work time runs out, hit next ⍄ to jump to the resting period"
-    let restTimeText = "This is the rest-mode duration. \n\nAfter resting is done, hit next ⍄ again to get back to work-mode"
-    let addMinText = "In case you are running out of time when timer is ongoing, this adds more minutes on-the-go ☀️"
-    let autoSwitchText = "Want to make the jumping back and forth between modes 🤖automatic? Enable this!😇"
-    let skipRestText = "In case you want to skip the next rest, enable this will keep your timer in working mode alone, until you disable it 😏."
-    let volumeControlText = "This bar controls both button tapping sound volume and the alert sound volume 📢. \nYou can turn off tapping sound in Settings ⚙. \n\n🎉That's it!! You are good to go!😃"
+    let workTimeText = "Hi there! Quick walk-through? \nTimer can be operated in 2 modes:  \nWORKING 💪 and RESTING 😪. \n\nThis box is your work duration, which can be changed later"
+    let restTimeText = "This is the rest-mode duration, similarly"
+    let addMinText = "In case you are running short on time but want to keep going, this adds minutes on the go!"
+    let autoSwitchText = "🤖automatically switching between work & rest. Sweet!"
+    let skipRestText = "In case you want to skip the rest all together, enable this will keep your timer in working mode."
+    let volumeControlText = "Button and the alert sound volume control. \nYou can turn off button sound effect in Settings ⚙. \n\n🎉That's it!! Enjoy!!!😁"
 
     //MARK:
     //MARK: LifeCycle & Notification
@@ -862,8 +862,8 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     func switchToNextPhase() {
         
-        UIView.transitionWithView(self.timer, duration: 0.4, options: [.TransitionCrossDissolve], animations: nil, completion: nil)
-        UIView.transitionWithView(self.status, duration: 0.4, options: [.TransitionFlipFromTop], animations: nil, completion: nil)
+        UIView.transitionWithView(self.timer, duration: 0.3, options: [.TransitionFlipFromLeft], animations: nil, completion: nil)
+        UIView.transitionWithView(self.status, duration: 0.3, options: [.TransitionCrossDissolve], animations: nil, completion: nil)
         
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)

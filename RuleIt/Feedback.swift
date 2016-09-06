@@ -29,7 +29,7 @@ class Action: UITableViewController {
             UIApplication.sharedApplication().openURL(url!)
         }
         if indexPath.row == 1 {
-            let activityViewController = UIActivityViewController(activityItems: ["Check out this Time Infinity app at: itunes.apple.com/app/id1130529290" as NSString], applicationActivities: nil)
+            let activityViewController = UIActivityViewController(activityItems: ["Check out this Interval Timer Elite app at: itunes.apple.com/app/id1130529290" as NSString], applicationActivities: nil)
             presentViewController(activityViewController, animated: true, completion: {})
             
         }

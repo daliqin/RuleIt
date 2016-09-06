@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B12A63E1D23A2B700BEAEA2 /* Instructions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B12A63D1D23A2B700BEAEA2 /* Instructions.framework */; };
 		2B2F683E1CFE6E9A009FC076 /* stop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F683D1CFE6E9A009FC076 /* stop.wav */; };
 		2B2F68441CFE7270009FC076 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F68431CFE7270009FC076 /* beep.wav */; };
 		2B2F68481CFE97CF009FC076 /* next.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F68471CFE97CF009FC076 /* next.wav */; };
@@ -76,8 +75,6 @@
 		36C4756C1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756A1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf */; };
 		36C4756D1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */; };
 		4749EEA0AC05E5609239CAE4 /* Pods_RuleIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */; };
-		D66670791D467866003392F8 /* Instructions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66670781D467866003392F8 /* Instructions.framework */; };
-		D666707A1D467CC3003392F8 /* Instructions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D66670781D467866003392F8 /* Instructions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,7 +84,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D666707A1D467CC3003392F8 /* Instructions.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +91,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B12A63D1D23A2B700BEAEA2 /* Instructions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Instructions.framework; path = "/Users/Dali/Library/Developer/Xcode/DerivedData/RuleIt-bdshkhmpppspvwgqemnlsjhkasan/Build/Products/Debug-iphoneos/Instructions.framework"; sourceTree = "<absolute>"; };
 		2B2F683D1CFE6E9A009FC076 /* stop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stop.wav; sourceTree = "<group>"; };
 		2B2F68431CFE7270009FC076 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
 		2B2F68471CFE97CF009FC076 /* next.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = next.wav; sourceTree = "<group>"; };
@@ -143,7 +138,7 @@
 		2BFEAAF31D1874FB004E316D /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		2BFEAAF51D188EBC004E316D /* Timeguru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timeguru.png; sourceTree = "<group>"; };
 		360EA5021CBEECA800394402 /* skip colored.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skip colored.png"; sourceTree = "<group>"; };
-		363E3BA11CAC4F6800ECAAB9 /* Time Infinity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Infinity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		363E3BA11CAC4F6800ECAAB9 /* Interval Timer Elite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interval Timer Elite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		363E3BA61CAC4F6800ECAAB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		363E3BA91CAC4F6800ECAAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,7 +165,6 @@
 		36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFATSKEW.ttf; sourceTree = "<group>"; };
 		4BCF8D96A6CEC6EFC51521B6 /* Pods-RuleIt.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.distribution.xcconfig"; sourceTree = "<group>"; };
 		4D75911BDB18911EDDAD3477 /* Pods-RuleIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.release.xcconfig"; sourceTree = "<group>"; };
-		D66670781D467866003392F8 /* Instructions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instructions.framework; path = "../../../Library/Developer/Xcode/DerivedData/RuleIt-fpfiieykwladecctljdrfaormkcy/Build/Products/Debug-iphoneos/Instructions.framework"; sourceTree = "<group>"; };
 		FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuleIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,8 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4749EEA0AC05E5609239CAE4 /* Pods_RuleIt.framework in Frameworks */,
-				D66670791D467866003392F8 /* Instructions.framework in Frameworks */,
-				2B12A63E1D23A2B700BEAEA2 /* Instructions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +215,7 @@
 		363E3BA21CAC4F6800ECAAB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				363E3BA11CAC4F6800ECAAB9 /* Time Infinity.app */,
+				363E3BA11CAC4F6800ECAAB9 /* Interval Timer Elite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,8 +239,6 @@
 				3680D4D81CB5A3A200C55381 /* SWReveal */,
 				3680D4A31CB460DF00C55381 /* Icons */,
 				3680D4D91CB5A3CA00C55381 /* Supporting files */,
-				2B12A63D1D23A2B700BEAEA2 /* Instructions.framework */,
-				D66670781D467866003392F8 /* Instructions.framework */,
 			);
 			path = RuleIt;
 			sourceTree = "<group>";
@@ -373,7 +363,7 @@
 			);
 			name = RuleIt;
 			productName = RuleIt;
-			productReference = 363E3BA11CAC4F6800ECAAB9 /* Time Infinity.app */;
+			productReference = 363E3BA11CAC4F6800ECAAB9 /* Interval Timer Elite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -640,7 +630,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = "Time Infinity";
+				PRODUCT_NAME = "Interval Timer Elite";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -751,7 +741,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = "Time Infinity";
+				PRODUCT_NAME = "Interval Timer Elite";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -776,7 +766,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = "Time Infinity";
+				PRODUCT_NAME = "Interval Timer Elite";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;

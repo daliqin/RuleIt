@@ -2,10 +2,10 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Crashlytics (3.7.2):
+  - Crashlytics (3.7.3):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.7)
-  - Instructions (0.4.2)
+  - Fabric (1.6.8)
+  - Instructions (0.4.3)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
@@ -15,9 +15,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
-  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
-  Instructions: acb639e81dbbab70c92d35bc08f4f831fec84e0c
+  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  Instructions: 18124d63eb8b08828e1124432de115aa48db3669
 
 PODFILE CHECKSUM: 94e3989d82af2a6c85ca32efb38066e92a106583
 
