@@ -9,8 +9,8 @@
 import Foundation
 
 protocol DataDelegate{
-    func userDidSelectWorkTime(workTime: Double)
-    func userDidSelectRestTime(restTime: Double)
+    func userDidSelectWorkTime(_ workTime: Double)
+    func userDidSelectRestTime(_ restTime: Double)
 }
 
 class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -49,24 +49,24 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         restTimePicker.delegate = self
         restTimePicker.dataSource = self
         
-        if NSUserDefaults.standardUserDefaults().objectForKey("workTime") != nil {
+        if UserDefaults.standard.object(forKey: "workTime") != nil {
             
-            let wHour: Int = NSUserDefaults.standardUserDefaults().integerForKey("workTime") / 3600
-            let wMin: Int = (NSUserDefaults.standardUserDefaults().integerForKey("workTime") - wHour * 3600) / 60
-            let wSec: Int = NSUserDefaults.standardUserDefaults().integerForKey("workTime") - wHour * 3600 - wMin * 60
+            let wHour: Int = UserDefaults.standard.integer(forKey: "workTime") / 3600
+            let wMin: Int = (UserDefaults.standard.integer(forKey: "workTime") - wHour * 3600) / 60
+            let wSec: Int = UserDefaults.standard.integer(forKey: "workTime") - wHour * 3600 - wMin * 60
             workTimePicker.selectRow(wHour, inComponent: 0, animated: true)
             workTimePicker.selectRow(wMin, inComponent: 1, animated: true)
             workTimePicker.selectRow(wSec, inComponent: 2, animated: true)
 
-            let rHour: Int = NSUserDefaults.standardUserDefaults().integerForKey("restTime") / 3600
-            let rMin: Int = (NSUserDefaults.standardUserDefaults().integerForKey("restTime") - rHour * 3600) / 60
-            let rSec: Int = NSUserDefaults.standardUserDefaults().integerForKey("restTime") - rHour * 3600 - rMin * 60
+            let rHour: Int = UserDefaults.standard.integer(forKey: "restTime") / 3600
+            let rMin: Int = (UserDefaults.standard.integer(forKey: "restTime") - rHour * 3600) / 60
+            let rSec: Int = UserDefaults.standard.integer(forKey: "restTime") - rHour * 3600 - rMin * 60
             restTimePicker.selectRow(rHour, inComponent: 0, animated: true)
             restTimePicker.selectRow(rMin, inComponent: 1, animated: true)
             restTimePicker.selectRow(rSec, inComponent: 2, animated: true)
             
-            worktimeInSeconds = NSUserDefaults.standardUserDefaults().integerForKey("workTime")
-            resttimeInSeconds = NSUserDefaults.standardUserDefaults().integerForKey("restTime")
+            worktimeInSeconds = UserDefaults.standard.integer(forKey: "workTime")
+            resttimeInSeconds = UserDefaults.standard.integer(forKey: "restTime")
             
         } else {
          
@@ -80,68 +80,68 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         self.delegate = timerManagerObj
         
         upperView.layer.borderWidth = 1
-        upperView.layer.borderColor = UIColor.grayColor().CGColor
+        upperView.layer.borderColor = UIColor.gray.cgColor
         headsupMsg.alpha = 0
         
         if isClockInWorkingMode {
             workTimePicker.alpha = 0.4
-            self.view.userInteractionEnabled = false
+            self.view.isUserInteractionEnabled = false
             
             restTimePicker.alpha = 0.4
-            self.view.userInteractionEnabled = false
+            self.view.isUserInteractionEnabled = false
         }
 
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         // notification for invalidating/validating the picker view
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RightViewVC.validatePickerView(_:)), name: "validatePickerViewID", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RightViewVC.invalidatePickerView(_:)), name: "invalidatePickerViewID", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(RightViewVC.validatePickerView(_:)), name: NSNotification.Name(rawValue: "validatePickerViewID"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(RightViewVC.invalidatePickerView(_:)), name: NSNotification.Name(rawValue: "invalidatePickerViewID"), object: nil)
         
         if !isClockInWorkingMode {
             // update the mainView's clock display
-            NSNotificationCenter.defaultCenter().postNotificationName("userAdjustClockID", object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "userAdjustClockID"), object: nil)
             
             headsupMsg.alpha = 0
         } else {
             headsupMsg.alpha = 1
-            headsupMsg.textColor = UIColor.orangeColor()
+            headsupMsg.textColor = UIColor.orange
         }
         
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         
-        NSNotificationCenter.defaultCenter().postNotificationName("rightVCDisappearID", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "rightVCDisappearID"), object: nil)
 
     }
    
     
     //MARK: NotificationCenter
     
-    func validatePickerView(notification: NSNotification){
+    func validatePickerView(_ notification: Notification){
         
         workTimePicker.alpha = 1.0
-        self.view.userInteractionEnabled = true
+        self.view.isUserInteractionEnabled = true
         
         restTimePicker.alpha = 1.0
-        self.view.userInteractionEnabled = true
+        self.view.isUserInteractionEnabled = true
     }
     
-    func invalidatePickerView(notification: NSNotification){
+    func invalidatePickerView(_ notification: Notification){
         
         workTimePicker.alpha = 0.4
-        self.view.userInteractionEnabled = false
+        self.view.isUserInteractionEnabled = false
         
         restTimePicker.alpha = 0.4
-        self.view.userInteractionEnabled = false
+        self.view.isUserInteractionEnabled = false
     }
     
     
     //MARK:
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         if component == 0 {
             return hours.count
@@ -154,40 +154,40 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
 
     
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         if component == 0 {
             let hourData = hours[row]
-            let myTitle = NSAttributedString(string: hourData, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+            let myTitle = NSAttributedString(string: hourData, attributes: [NSForegroundColorAttributeName:UIColor.white])
             return myTitle
         }
         if component == 1 {
             let minData = minutes[row]
-            let myTitle = NSAttributedString(string: minData, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+            let myTitle = NSAttributedString(string: minData, attributes: [NSForegroundColorAttributeName:UIColor.white])
             return myTitle
         }
         else {
             let secData = seconds[row]
-            let myTitle = NSAttributedString(string: secData, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+            let myTitle = NSAttributedString(string: secData, attributes: [NSForegroundColorAttributeName:UIColor.white])
             return myTitle
         }
         
     }
     
-    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 70
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
        
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.whiteColor()
+        pickerLabel.textColor = UIColor.white
         pickerLabel.font = UIFont(name: "Digital dream Fat Skew", size: 21)
-        pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.textAlignment = NSTextAlignment.center
         
         if component == 0 {
              pickerLabel.text = hours[row]
@@ -205,7 +205,7 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     //MARK:
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if component == 0 {
             return hours[row]
@@ -218,7 +218,7 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
        
         if pickerView.tag == 1{
             
@@ -232,7 +232,7 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
                 worktimeSec = Int(seconds[row])!
             }
             worktimeInSeconds = (worktimeHour * 3600) + (worktimeMin * 60) + worktimeSec
-            NSUserDefaults.standardUserDefaults().setInteger(worktimeInSeconds, forKey: "workTime")
+            UserDefaults.standard.set(worktimeInSeconds, forKey: "workTime")
             
             if (delegate != nil){
                 
@@ -251,7 +251,7 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
                 resttimeSec = Int(seconds[row])!
             }
             resttimeInSeconds = (resttimeHour * 3600) + (resttimeMin * 60) + resttimeSec
-            NSUserDefaults.standardUserDefaults().setInteger(resttimeInSeconds, forKey: "restTime")
+            UserDefaults.standard.set(resttimeInSeconds, forKey: "restTime")
 
             if (delegate != nil){
                 

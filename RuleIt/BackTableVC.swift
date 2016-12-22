@@ -28,28 +28,28 @@ class BackTableVC: UITableViewController {
 //        backTableView.tableFooterView = footerImageView
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(tableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableArray[indexPath.row], for: indexPath) as UITableViewCell
         
         cell.textLabel?.text = tableArray[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.selectionStyle = UITableViewCellSelectionStyle.Gray
-        cell.textLabel?.highlightedTextColor = UIColor.blackColor()
+        cell.textLabel?.textColor = UIColor.white
+        cell.selectionStyle = UITableViewCellSelectionStyle.gray
+        cell.textLabel?.highlightedTextColor = UIColor.black
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableArray.count
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         switch indexPath.row {
         case 0:
@@ -72,11 +72,11 @@ class BackTableVC: UITableViewController {
     
 // MARK: table view header
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "I.V.ELITE"
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
        
         let title = self.tableView(tableView, titleForHeaderInSection: section)
         if (title == "I.V.ELITE") {
@@ -85,7 +85,7 @@ class BackTableVC: UITableViewController {
         return 15.0
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont(name: "Digital dream Fat", size: 11)!
@@ -105,20 +105,20 @@ class BackTableVC: UITableViewController {
     
     // MARK: helper func
     
-    func popAlertView(msgBody: String, identifier: String) {
+    func popAlertView(_ msgBody: String, identifier: String) {
         if isClockInWorkingMode {
-            let alert = UIAlertController(title: "Heads Up", message: msgBody, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Destructive, handler: { action in
-                self.performSegueWithIdentifier(identifier, sender: self)
-                NSNotificationCenter.defaultCenter().postNotificationName("validatePickerViewID", object: nil)
+            let alert = UIAlertController(title: "Heads Up", message: msgBody, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive, handler: { action in
+                self.performSegue(withIdentifier: identifier, sender: self)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "validatePickerViewID"), object: nil)
                 isClockInWorkingMode = false
             }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { action in
-                self.revealViewController().revealToggleAnimated(true)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { action in
+                self.revealViewController().revealToggle(animated: true)
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         } else {
-            self.performSegueWithIdentifier(identifier, sender: self)
+            self.performSegue(withIdentifier: identifier, sender: self)
         }
 
     }

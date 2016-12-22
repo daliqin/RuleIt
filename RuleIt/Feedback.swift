@@ -22,21 +22,21 @@ class Action: UITableViewController {
         //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let email = "time.Infinity@yahoo.com"
-            let url = NSURL(string: "mailto:\(email)")
-            UIApplication.sharedApplication().openURL(url!)
+            let url = URL(string: "mailto:\(email)")
+            UIApplication.shared.openURL(url!)
         }
         if indexPath.row == 1 {
             let activityViewController = UIActivityViewController(activityItems: ["Check out this Interval Timer Elite app at: itunes.apple.com/app/id1130529290" as NSString], applicationActivities: nil)
-            presentViewController(activityViewController, animated: true, completion: {})
+            present(activityViewController, animated: true, completion: {})
             
         }
         if indexPath.row == 2 {
-            UIApplication.sharedApplication().openURL(NSURL(string : "itms-apps://itunes.apple.com/app/id1130529290")!)
+            UIApplication.shared.openURL(URL(string : "itms-apps://itunes.apple.com/app/id1130529290")!)
         }
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

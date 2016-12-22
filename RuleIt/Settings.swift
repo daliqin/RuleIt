@@ -24,28 +24,28 @@ class Settings: UITableViewController {
         hamburger.action = #selector(SWRevealViewController.revealToggle(_:))
         //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
-        btnSoundSwhOutlet.on = NSUserDefaults.standardUserDefaults().boolForKey("btnSoundSwitchState")
-        screenOnSwhOutlet.on = NSUserDefaults.standardUserDefaults().boolForKey("screenLitSwitchState")
+        btnSoundSwhOutlet.isOn = UserDefaults.standard.bool(forKey: "btnSoundSwitchState")
+        screenOnSwhOutlet.isOn = UserDefaults.standard.bool(forKey: "screenLitSwitchState")
     }
     
     
-    @IBAction func btnSoundSwitch(sender: AnyObject) {
+    @IBAction func btnSoundSwitch(_ sender: AnyObject) {
         
-        (sender.on != nil) ? (btnSoundEffect = true) : (btnSoundEffect = false)
+        (sender.isOn != nil) ? (btnSoundEffect = true) : (btnSoundEffect = false)
         vc.btnSoundEffect = btnSoundEffect
-        NSUserDefaults.standardUserDefaults().setBool(btnSoundSwhOutlet.on, forKey: "btnSoundSwitchState")
+        UserDefaults.standard.set(btnSoundSwhOutlet.isOn, forKey: "btnSoundSwitchState")
 
     }
     
     
-    @IBAction func screenOnSwitch(sender: AnyObject) {
+    @IBAction func screenOnSwitch(_ sender: AnyObject) {
        
-        if sender.on != nil {
-            UIApplication.sharedApplication().idleTimerDisabled = true
+        if sender.isOn != nil {
+            UIApplication.shared.isIdleTimerDisabled = true
         } else {
-            UIApplication.sharedApplication().idleTimerDisabled = false
+            UIApplication.shared.isIdleTimerDisabled = false
         }
-        NSUserDefaults.standardUserDefaults().setBool(screenOnSwhOutlet.on, forKey: "screenLitSwitchState")
+        UserDefaults.standard.set(screenOnSwhOutlet.isOn, forKey: "screenLitSwitchState")
 
 
     }
