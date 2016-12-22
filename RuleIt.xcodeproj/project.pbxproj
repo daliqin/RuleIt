@@ -379,6 +379,7 @@
 					363E3BA01CAC4F6800ECAAB9 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = GYMMFU2F5S;
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -633,6 +634,7 @@
 				PRODUCT_NAME = "Interval Timer Elite";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Distribution;
@@ -745,6 +747,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -769,6 +772,7 @@
 				PRODUCT_NAME = "Interval Timer Elite";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

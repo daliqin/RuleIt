@@ -48,13 +48,13 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     var progressFull : Bool = false
     var firstRun : Bool = true
     var delegate : SWRevealViewControllerDelegate?
-    let myAppDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let myAppDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let playStop = UIButton()
     var isWorktimeClockActive = true
     var skipRest = false
     var displayingAMPM = true
     var displayingDate = true
-    var refreshCurrentDateAndTime = NSTimer()
+    var refreshCurrentDateAndTime = Foundation.Timer()
     var audioPlayer = AVAudioPlayer()
     var addMinCount = 0
     var autoSwitch = false
@@ -64,7 +64,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     var screenAlwaysLit = false
     let currCall = CTCallCenter()
     var autoSwitchInterval = 3
-    var autoSwitchTimer = NSTimer?()
+    var autoSwitchTimer : Foundation.Timer?
     
     // instruction view
     let pointOfInterest = UIView()
@@ -101,87 +101,87 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         self.skipBtn?.layer.cornerRadius = 4.0
         self.volumeBar?.layer.cornerRadius = 4.0
         let skipView = CoachMarkSkipDefaultView()
-        skipView.setTitle("Skip", forState: .Normal)
+        skipView.setTitle("Skip", for: UIControlState())
         self.coachMarksController?.skipView = skipView
         self.coachMarksController?.overlayBackgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.91)
         
         // my timer presets
         displayClock()
-        stopBtn.enabled = false
+        stopBtn.isEnabled = false
         stopBtn.alpha = 0.5
         progressBar.progress = 0.0
-        playPauseBtn.setImage(UIImage(named: "play.png"), forState: UIControlState.Normal)
+        playPauseBtn.setImage(UIImage(named: "play.png"), for: UIControlState())
         playPauseBtn.alpha = 1.0
-        plusOneMin.enabled = false
+        plusOneMin.isEnabled = false
         plusOneMin.alpha = 0.5
-        nextBtn.enabled = true
+        nextBtn.isEnabled = true
         
         status.text = "work mode"
-        status.textColor = UIColor.cyanColor()
+        status.textColor = UIColor.cyan
         status.alpha = 1.0
         
-        worktimeLabel.layer.backgroundColor = UIColor.darkTextColor().CGColor
+        worktimeLabel.layer.backgroundColor = UIColor.darkText.cgColor
         worktimeLabel.layer.cornerRadius = 8
-        resttimeLabel.layer.backgroundColor = UIColor.darkTextColor().CGColor
+        resttimeLabel.layer.backgroundColor = UIColor.darkText.cgColor
         resttimeLabel.layer.cornerRadius = 8
         
-        volumeBar.value = NSUserDefaults.standardUserDefaults().floatForKey("volumeBar") ?? 0.5
+        volumeBar.value = UserDefaults.standard.float(forKey: "volumeBar") 
 
-        let date = NSDate()
-        let dateOutput = NSDateFormatter()
-        dateOutput.locale = NSLocale(localeIdentifier:"en_US")
+        let date = Date()
+        let dateOutput = DateFormatter()
+        dateOutput.locale = Locale(identifier:"en_US")
         dateOutput.dateFormat = "MMMM d"
-        currentDateDisplay.setTitle(dateOutput.stringFromDate(date), forState: UIControlState.Normal)
-        let timeOutput = NSDateFormatter()
-        timeOutput.locale = NSLocale(localeIdentifier:"en_US")
+        currentDateDisplay.setTitle(dateOutput.string(from: date), for: UIControlState())
+        let timeOutput = DateFormatter()
+        timeOutput.locale = Locale(identifier:"en_US")
         timeOutput.dateFormat = "h:mm a"
-        currentTimeDisplay.setTitle(timeOutput.stringFromDate(date), forState: UIControlState.Normal)
+        currentTimeDisplay.setTitle(timeOutput.string(from: date), for: UIControlState())
         
         // refreshing the Date/Time display
-        refreshCurrentDateAndTime = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController.refreshCurrentDT), userInfo: nil, repeats: true)
+        refreshCurrentDateAndTime = Foundation.Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.refreshCurrentDT), userInfo: nil, repeats: true)
         
         // notification center for receiving if user has slide to the right menu
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                          selector: #selector(ViewController.userAdjustClock(_:)),
-                                         name: "userAdjustClockID",
+                                         name: NSNotification.Name(rawValue: "userAdjustClockID"),
                                          object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                          selector: #selector(ViewController.rightVCDidDisappear(_:)),
-                                         name: "rightVCDisappearID",
+                                         name: NSNotification.Name(rawValue: "rightVCDisappearID"),
                                          object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                          selector: #selector(ViewController.comebackFromSuspendidState(_:)),
-                                         name: "comebackFromSuspendidStateID",
+                                         name: NSNotification.Name(rawValue: "comebackFromSuspendidStateID"),
                                          object: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
        
         // first time running, set state to has launched
-        let hasLaunched =  NSUserDefaults.standardUserDefaults().boolForKey("HasLaunched")
+        let hasLaunched =  UserDefaults.standard.bool(forKey: "HasLaunched")
         if !hasLaunched {
             self.coachMarksController?.startOn(self)
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunched")
+            UserDefaults.standard.set(true, forKey: "HasLaunched")
         }
         
-        autoSwitch = NSUserDefaults.standardUserDefaults().boolForKey("autoSwitchState")
-        autoSwitch ? autoSwitchBtn.setImage(UIImage(named: "autoSwitchColored.png"), forState: UIControlState.Normal) :
-                     autoSwitchBtn.setImage(UIImage(named: "autoSwitch.png"), forState: UIControlState.Normal)
+        autoSwitch = UserDefaults.standard.bool(forKey: "autoSwitchState")
+        autoSwitch ? autoSwitchBtn.setImage(UIImage(named: "autoSwitchColored.png"), for: UIControlState()) :
+                     autoSwitchBtn.setImage(UIImage(named: "autoSwitch.png"), for: UIControlState())
 
-        btnSoundEffect = NSUserDefaults.standardUserDefaults().boolForKey("btnSoundSwitchState")
-        UIApplication.sharedApplication().idleTimerDisabled = NSUserDefaults.standardUserDefaults().boolForKey("screenLitSwitchState")
+        btnSoundEffect = UserDefaults.standard.bool(forKey: "btnSoundSwitchState")
+        UIApplication.shared.isIdleTimerDisabled = UserDefaults.standard.bool(forKey: "screenLitSwitchState")
 
     }
     
-    func comebackFromSuspendidState(notification: NSNotification) {
+    func comebackFromSuspendidState(_ notification: Notification) {
     
-        let timeSpotWhenSuspended = myAppDelegate.userDefaults.valueForKey("TimeSpot")
+        let timeSpotWhenSuspended = myAppDelegate.userDefaults.value(forKey: "TimeSpot")
         if timeSpotWhenSuspended != nil && isStartPressed == true {
             
-            let currentTime = NSDate()
-            let timeInterval: Double = currentTime.timeIntervalSinceDate(timeSpotWhenSuspended as! NSDate);
+            let currentTime = Date()
+            let timeInterval: Double = currentTime.timeIntervalSince(timeSpotWhenSuspended as! Date);
             if secondCountdown < Int(timeInterval){
               
                 secondCountdown = 0
@@ -195,13 +195,13 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         }
     }
     
-    func userAdjustClock(notification: NSNotification){
+    func userAdjustClock(_ notification: Notification){
        
-        myAppDelegate.displayClockTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.displayClock), userInfo: nil, repeats: true)
+        myAppDelegate.displayClockTimer = Foundation.Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ViewController.displayClock), userInfo: nil, repeats: true)
 
     }
     
-    func rightVCDidDisappear(notification: NSNotification){
+    func rightVCDidDisappear(_ notification: Notification){
         if myAppDelegate.displayClockTimer != nil{
             myAppDelegate.displayClockTimer!.invalidate()
         }
@@ -212,7 +212,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     func setTimer() {
         
-        myAppDelegate.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(ViewController.timerRun), userInfo: nil, repeats: true)
+        myAppDelegate.countdownTimer = Foundation.Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.timerRun), userInfo: nil, repeats: true)
     }
     
     func timerRun(){
@@ -236,10 +236,10 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
                 
                 myAppDelegate.countdownTimer!.invalidate()
                 myAppDelegate.countdownTimer = nil
-                playPauseBtn.enabled = false
+                playPauseBtn.isEnabled = false
                 playPauseBtn.alpha = 0.5
                 //timer.textColor = UIColor.darkGrayColor()
-                playPauseBtn.setImage(UIImage(named: "play.png"), forState: UIControlState.Normal)
+                playPauseBtn.setImage(UIImage(named: "play.png"), for: UIControlState())
                 if secondCountdown == 0 {
                     
                     if let calls = currCall.currentCalls {
@@ -253,25 +253,25 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
                     }
                 }
                 isWorktimeClockActive ? (status.text = "Work done") : (status.text = "Rest done")
-                status.textColor = UIColor.yellowColor()
+                status.textColor = UIColor.yellow
                 status.alpha = 1
                 progressFull = true
                 timer.text = "00:00"
 
-                plusOneMin.enabled = false
+                plusOneMin.isEnabled = false
                 plusOneMin.alpha = 0.5
                 
                 if autoSwitch && isStartPressed {
                     
                     autoSwitchIntervalTimer()
-                    autoSwitchTimer = NSTimer.scheduledTimerWithTimeInterval(1.1,
+                    autoSwitchTimer = Foundation.Timer.scheduledTimer(timeInterval: 1.1,
                                                             target: self,
                                                             selector: #selector(ViewController.autoSwitchIntervalTimer),
                                                             userInfo: nil,
                                                             repeats: true)
                     
                     delay(3.0, closure: {
-                        if !self.playPauseBtn.enabled {
+                        if !self.playPauseBtn.isEnabled {
                             self.nextBtn(self)
                             self.PlayStop(self)
                         }
@@ -332,58 +332,58 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         
         if displayingDate {
             
-            let date = NSDate()
-            let dateOutput = NSDateFormatter()
-            dateOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let dateOutput = DateFormatter()
+            dateOutput.locale = Locale(identifier:"en_US")
             dateOutput.dateFormat = "MMMM d"
-            currentDateDisplay.setTitle(dateOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentDateDisplay.setTitle(dateOutput.string(from: date), for: UIControlState())
         } else {
             
-            let date = NSDate()
-            let dateOutput = NSDateFormatter()
-            dateOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let dateOutput = DateFormatter()
+            dateOutput.locale = Locale(identifier:"en_US")
             dateOutput.dateFormat = "EEEE"
-            currentDateDisplay.setTitle(dateOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentDateDisplay.setTitle(dateOutput.string(from: date), for: UIControlState())
         }
         
         if displayingAMPM {
             
-            let date = NSDate()
-            let timeOutput = NSDateFormatter()
-            timeOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let timeOutput = DateFormatter()
+            timeOutput.locale = Locale(identifier:"en_US")
             timeOutput.dateFormat = "h:mm a"
-            currentTimeDisplay.setTitle(timeOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentTimeDisplay.setTitle(timeOutput.string(from: date), for: UIControlState())
         } else {
             
-            let date = NSDate()
-            let timeOutput = NSDateFormatter()
-            timeOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let timeOutput = DateFormatter()
+            timeOutput.locale = Locale(identifier:"en_US")
             timeOutput.dateFormat = "HH:mm"
-            currentTimeDisplay.setTitle(timeOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentTimeDisplay.setTitle(timeOutput.string(from: date), for: UIControlState())
         }
     }
     
     //MARK:
     //MARK: playback controls
     
-    @IBAction func PlayStop(sender: AnyObject) {  // should've been PlayPause for this button
+    @IBAction func PlayStop(_ sender: AnyObject) {  // should've been PlayPause for this button
        
         if secondCountdown != 0 {
            
-            stopBtn.enabled = true
+            stopBtn.isEnabled = true
             stopBtn.alpha = 1
-            nextBtn.enabled = true
+            nextBtn.isEnabled = true
             nextBtn.alpha = 1
-            plusOneMin.enabled = true
+            plusOneMin.isEnabled = true
             plusOneMin.alpha = 1
-            timer.textColor = UIColor.whiteColor()
+            timer.textColor = UIColor.white
             if btnSoundEffect {
                 playSoundEffect("play.wav", soundTwo: "blip.wav", loops: 0, vibration: false)
             }
             
             if !isStartPressed{
                 
-                playPauseBtn.setImage(UIImage(named: "pause.png"), forState: UIControlState.Normal)
+                playPauseBtn.setImage(UIImage(named: "pause.png"), for: UIControlState())
                 //stops the displayClock
                 if myAppDelegate.displayClockTimer != nil {
                     
@@ -393,7 +393,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
                 //starts the clock
                 setTimer()
                 isWorktimeClockActive ? (status.text = "working") : (status.text = "resting")
-                status.textColor = UIColor.cyanColor()
+                status.textColor = UIColor.cyan
                 status.alpha = 1.0
                 isStartPressed = true
                 myAppDelegate.isStartPressed = isStartPressed
@@ -405,51 +405,51 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
                 myAppDelegate.refreshClock?.invalidate()
                 
                 // invalidate the pickerView
-                NSNotificationCenter.defaultCenter().postNotificationName("invalidatePickerViewID", object: nil)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "invalidatePickerViewID"), object: nil)
                 
             } else {
                 
-                playPauseBtn.setImage(UIImage(named: "play.png"), forState: UIControlState.Normal)
+                playPauseBtn.setImage(UIImage(named: "play.png"), for: UIControlState())
                 
                 // pause the clock
                 myAppDelegate.countdownTimer!.invalidate()
                 status.text = "PAUSED"
                 isPausing = true
-                status.textColor = UIColor.yellowColor()
+                status.textColor = UIColor.yellow
                 status.alpha = 1.0
                 isStartPressed = false
                 myAppDelegate.isStartPressed = isStartPressed
                 myAppDelegate.isTimerActive = false
                 
                 //start refreshClock(), in case the user adjust the clock after pausing
-                myAppDelegate.refreshClock = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(ViewController.refreshClock), userInfo: nil, repeats: true)
+                myAppDelegate.refreshClock = Foundation.Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(ViewController.refreshClock), userInfo: nil, repeats: true)
             }
         }
        
     }
     
-    @IBAction func stop(sender: AnyObject) {
+    @IBAction func stop(_ sender: AnyObject) {
         
         
         if isClockInWorkingMode && secondCountdown > 0 {
             let alert = UIAlertController(title: "Stop Timer?",
                                           message: "The timer is currently running, are you sure you want to stop it?",
-                                          preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Destructive, handler: { action in
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive, handler: { action in
                 self.stopTimer()
                 //NSNotificationCenter.defaultCenter().postNotificationName("validatePickerViewID", object: nil)
                 isClockInWorkingMode = false
             }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { action in
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { action in
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
 
         } else {
             self.stopTimer()
         }
     }
     
-    @IBAction func plusOneMin(sender: AnyObject) {
+    @IBAction func plusOneMin(_ sender: AnyObject) {
         
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
@@ -469,19 +469,19 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         }
     }
     
-    @IBAction func nextBtn(sender: AnyObject) {
+    @IBAction func nextBtn(_ sender: AnyObject) {
         
         if isClockInWorkingMode && secondCountdown > 0 {
             let alert = UIAlertController(title: "Moving on?",
                                           message: "The current phase is ongoing, are you sure you want to move to the next phase?",
-                                          preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Destructive, handler: { action in
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive, handler: { action in
                 self.switchToNextPhase()
                 isClockInWorkingMode = false
             }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { action in
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { action in
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             
         } else {
             self.switchToNextPhase()
@@ -490,7 +490,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         
     }
     
-    @IBAction func skipRestBtnAction(sender: AnyObject) {
+    @IBAction func skipRestBtnAction(_ sender: AnyObject) {
         
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
@@ -499,20 +499,20 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
 
         if skipRest {
             skipRest = false
-            skipBtn.setImage(UIImage(named: "skip.png"), forState: UIControlState.Normal)
+            skipBtn.setImage(UIImage(named: "skip.png"), for: UIControlState())
             status.text = "skip rest off"
-            status.textColor = UIColor.orangeColor()
+            status.textColor = UIColor.orange
             labelDelayFunc()
         } else {
             skipRest = true
-            skipBtn.setImage(UIImage(named: "skip colored.png"), forState: UIControlState.Normal)
+            skipBtn.setImage(UIImage(named: "skip colored.png"), for: UIControlState())
             status.text = "skip rest on"
-            status.textColor = UIColor.orangeColor()
+            status.textColor = UIColor.orange
             labelDelayFunc()
         }
     }
     
-    @IBAction func autoSwitchBtnAction(sender: AnyObject) {
+    @IBAction func autoSwitchBtnAction(_ sender: AnyObject) {
         
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
@@ -522,52 +522,52 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         if !autoSwitch {
             
             autoSwitch = true
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "autoSwitchState")
-            autoSwitchBtn.setImage(UIImage(named: "autoSwitchColored.png"), forState: UIControlState.Normal)
+            UserDefaults.standard.set(true, forKey: "autoSwitchState")
+            autoSwitchBtn.setImage(UIImage(named: "autoSwitchColored.png"), for: UIControlState())
             status.text = "auto switch on"
-            status.textColor = UIColor.orangeColor()
+            status.textColor = UIColor.orange
             labelDelayFunc()
         } else {
             
             autoSwitch = false
-            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "autoSwitchState")
-            autoSwitchBtn.setImage(UIImage(named: "autoSwitch.png"), forState: UIControlState.Normal)
+            UserDefaults.standard.set(false, forKey: "autoSwitchState")
+            autoSwitchBtn.setImage(UIImage(named: "autoSwitch.png"), for: UIControlState())
             status.text = "auto switch off"
-            status.textColor = UIColor.orangeColor()
+            status.textColor = UIColor.orange
             labelDelayFunc()
         }
     }
     
-    @IBAction func volumeBarAdjusted(sender: AnyObject) {
+    @IBAction func volumeBarAdjusted(_ sender: AnyObject) {
         
-        NSUserDefaults.standardUserDefaults().setFloat(volumeBar.value, forKey: "volumeBar")
+        UserDefaults.standard.set(volumeBar.value, forKey: "volumeBar")
     }
     
-    @IBAction func currentTimeAction(sender: AnyObject) {
+    @IBAction func currentTimeAction(_ sender: AnyObject) {
        
         if btnSoundEffect {
             playSoundEffect("pop.wav", soundTwo: "pop.wav", loops: 0, vibration: false)
         }
         if displayingAMPM {
            
-            let date = NSDate()
-            let timeOutput = NSDateFormatter()
-            timeOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let timeOutput = DateFormatter()
+            timeOutput.locale = Locale(identifier:"en_US")
             timeOutput.dateFormat = "HH:mm" // change to 24Hr format
-            currentTimeDisplay.setTitle(timeOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentTimeDisplay.setTitle(timeOutput.string(from: date), for: UIControlState())
             displayingAMPM = false
        } else {
             
-            let date = NSDate()
-            let timeOutput = NSDateFormatter()
-            timeOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let timeOutput = DateFormatter()
+            timeOutput.locale = Locale(identifier:"en_US")
             timeOutput.dateFormat = "h:mm a" // back to AM/PM
-            currentTimeDisplay.setTitle(timeOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentTimeDisplay.setTitle(timeOutput.string(from: date), for: UIControlState())
             displayingAMPM = true
         }
     }
     
-    @IBAction func currentDateAction(sender: AnyObject) {
+    @IBAction func currentDateAction(_ sender: AnyObject) {
         
         if btnSoundEffect {
             playSoundEffect("pop.wav", soundTwo: "pop.wav", loops: 0, vibration: false)
@@ -575,19 +575,19 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         
         if displayingDate {
             
-            let date = NSDate()
-            let dateOutput = NSDateFormatter()
-            dateOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let dateOutput = DateFormatter()
+            dateOutput.locale = Locale(identifier:"en_US")
             dateOutput.dateFormat = "EEEE"
-            currentDateDisplay.setTitle(dateOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentDateDisplay.setTitle(dateOutput.string(from: date), for: UIControlState())
             displayingDate = false
         } else {
             
-            let date = NSDate()
-            let dateOutput = NSDateFormatter()
-            dateOutput.locale = NSLocale(localeIdentifier:"en_US")
+            let date = Date()
+            let dateOutput = DateFormatter()
+            dateOutput.locale = Locale(identifier:"en_US")
             dateOutput.dateFormat = "MMMM d"
-            currentDateDisplay.setTitle(dateOutput.stringFromDate(date), forState: UIControlState.Normal)
+            currentDateDisplay.setTitle(dateOutput.string(from: date), for: UIControlState())
             displayingDate = true
         }
     }
@@ -595,19 +595,19 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     //MARK:
     //MARK: alarm sounds
     
-    func playSoundEffect(soundOne: String, soundTwo: String, loops: Int, vibration: Bool) {
+    func playSoundEffect(_ soundOne: String, soundTwo: String, loops: Int, vibration: Bool) {
         
         var soundEffect = String()
         !isStartPressed ? (soundEffect = soundOne) : (soundEffect = soundTwo)
-        let path = NSBundle.mainBundle().pathForResource(soundEffect, ofType:nil)!
-        let url = NSURL(fileURLWithPath: path)
+        let path = Bundle.main.path(forResource: soundEffect, ofType:nil)!
+        let url = URL(fileURLWithPath: path)
         
         if vibration {
             playVibration()
         }
        
         do {
-            let sound = try AVAudioPlayer(contentsOfURL: url)
+            let sound = try AVAudioPlayer(contentsOf: url)
             audioPlayer = sound
             sound.numberOfLoops = loops
             sound.volume = volumeBar.value
@@ -617,14 +617,14 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         }
     }
     
-    @IBAction func volumeUp(sender: AnyObject) {
+    @IBAction func volumeUp(_ sender: AnyObject) {
         volumeBar.value += 0.1
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
         }
     }
     
-    @IBAction func volumeDown(sender: AnyObject) {
+    @IBAction func volumeDown(_ sender: AnyObject) {
         volumeBar.value -= 0.1
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
@@ -634,12 +634,12 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     //MARK:
     //MARK: Instruction View
     
-    func numberOfCoachMarksForCoachMarksController(coachMarkController: CoachMarksController)
+    func numberOfCoachMarksForCoachMarksController(_ coachMarkController: CoachMarksController)
         -> Int {
             return 6
     }
     
-    func coachMarksController(coachMarksController: CoachMarksController, coachMarksForIndex index: Int) -> CoachMark {
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarksForIndex index: Int) -> CoachMark {
         switch(index) {
         case 0:
             return coachMarksController.coachMarkForView(self.worktimeLabel)
@@ -658,7 +658,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         }
     }
     
-    func coachMarksController(coachMarksController: CoachMarksController, coachMarkViewsForIndex index: Int, coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsForIndex index: Int, coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
         
         var bodyView : CoachMarkBodyView
         var arrowView : CoachMarkArrowView?
@@ -760,36 +760,32 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     //MARK:
     //MARK: helper function
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
     
     func labelDelayFunc() {
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1 * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            UIView.transitionWithView(self.status, duration: 0.25, options: [.TransitionCrossDissolve], animations: {
+        let time = DispatchTime.now() + Double(1 * Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            UIView.transition(with: self.status, duration: 0.25, options: [.transitionCrossDissolve], animations: {
                     if self.isStartPressed {
                         if self.isWorktimeClockActive {
                             self.status.text = "working"
-                            self.status.textColor = UIColor.cyanColor()
+                            self.status.textColor = UIColor.cyan
                         } else {
                             self.status.text = "resting"
-                            self.status.textColor = UIColor.cyanColor()
+                            self.status.textColor = UIColor.cyan
                         }
                     } else if self.isPausing {
                         self.status.text = "pause"
-                        self.status.textColor = UIColor.yellowColor()
+                        self.status.textColor = UIColor.yellow
                     } else if self.isWorktimeClockActive {
                         self.status.text = "work mode"
-                        self.status.textColor = UIColor.cyanColor()
+                        self.status.textColor = UIColor.cyan
                     } else {
                         self.status.text = "rest mode"
-                        self.status.textColor = UIColor.cyanColor()
+                        self.status.textColor = UIColor.cyan
                     }
             }, completion: nil)
         }
@@ -798,8 +794,8 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     func playVibration() {
         
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 1 * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
+        let time = DispatchTime.now() + Double(1 * Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
     }
@@ -822,26 +818,26 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         iteration = 0
         displayClock()
         
-        playPauseBtn.enabled = true
+        playPauseBtn.isEnabled = true
         playPauseBtn.alpha = 1
-        playPauseBtn.setImage(UIImage(named: "play.png"), forState: UIControlState.Normal)
+        playPauseBtn.setImage(UIImage(named: "play.png"), for: UIControlState())
         //playPauseBtnRing.layer.borderColor = UIColor.cyanColor().CGColor
         //playPauseBtnRing.alpha = 1
         
-        stopBtn.enabled = false
+        stopBtn.isEnabled = false
         stopBtn.alpha = 0.5
         
         isWorktimeClockActive ? (status.text = "work mode") : (status.text = "rest mode")
-        status.textColor = UIColor.cyanColor()
+        status.textColor = UIColor.cyan
         status.alpha = 1.0
         isStartPressed = false
         myAppDelegate.isTimerActive = false
         isClockInWorkingMode = false
         
-        plusOneMin.enabled = false
+        plusOneMin.isEnabled = false
         plusOneMin.alpha = 0.5
         
-        timer.textColor = UIColor.whiteColor()
+        timer.textColor = UIColor.white
         firstRun = true
         progressFull = false
         
@@ -852,7 +848,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         myAppDelegate.refreshClock?.invalidate()
         
         // validate the pickerView
-        NSNotificationCenter.defaultCenter().postNotificationName("validatePickerViewID", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "validatePickerViewID"), object: nil)
         
         if autoSwitchTimer != nil {
             autoSwitchIntervalTimerInvalid()
@@ -862,8 +858,8 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     func switchToNextPhase() {
         
-        UIView.transitionWithView(self.timer, duration: 0.3, options: [.TransitionFlipFromLeft], animations: nil, completion: nil)
-        UIView.transitionWithView(self.status, duration: 0.3, options: [.TransitionCrossDissolve], animations: nil, completion: nil)
+        UIView.transition(with: self.timer, duration: 0.3, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
+        UIView.transition(with: self.status, duration: 0.3, options: [.transitionCrossDissolve], animations: nil, completion: nil)
         
         if btnSoundEffect {
             playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
@@ -890,24 +886,24 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
             myAppDelegate.isTimerActive = false
         }
         
-        playPauseBtn.enabled = true
+        playPauseBtn.isEnabled = true
         playPauseBtn.alpha = 1
-        playPauseBtn.setImage(UIImage(named: "play.png"), forState: UIControlState.Normal)
-        timer.textColor = UIColor.whiteColor()
+        playPauseBtn.setImage(UIImage(named: "play.png"), for: UIControlState())
+        timer.textColor = UIColor.white
         myAppDelegate.isNewSession = true
         
         //start refreshClock(), in case the user adjust the clock after jumping to the next working phase
-        myAppDelegate.refreshClock = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(ViewController.refreshClock), userInfo: nil, repeats: true)
+        myAppDelegate.refreshClock = Foundation.Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(ViewController.refreshClock), userInfo: nil, repeats: true)
         skipRest ? status.text = "work mode" : (isWorktimeClockActive ? (status.text = "work mode") : (status.text = "rest mode"))
-        status.textColor = UIColor.cyanColor()
+        status.textColor = UIColor.cyan
         status.alpha = 1.0
         
         if isWorktimeClockActive || skipRest {
-            worktimeLabel.textColor = UIColor.cyanColor()
-            resttimeLabel.textColor = UIColor.darkGrayColor()
+            worktimeLabel.textColor = UIColor.cyan
+            resttimeLabel.textColor = UIColor.darkGray
         } else {
-            worktimeLabel.textColor = UIColor.darkGrayColor()
-            resttimeLabel.textColor = UIColor.cyanColor()
+            worktimeLabel.textColor = UIColor.darkGray
+            resttimeLabel.textColor = UIColor.cyan
         }
         
         if autoSwitchTimer != nil {
@@ -934,7 +930,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         autoSwitchCtnDwnLbl.text = "0"
         autoSwitchCtnDwnLbl.alpha = 0
         autoSwitchInterval = 3
-        autoSwitchTimer!.invalidate()
+        autoSwitchTimer?.invalidate()
         autoSwitchTimer = nil
     }
 

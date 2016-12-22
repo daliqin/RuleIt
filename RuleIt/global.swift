@@ -12,7 +12,7 @@ class timerManager : DataDelegate {
     
     var worktimerSetByUser = 0
     var resttimerSetByUser = 0
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var sharedTimer : timerManager?
     
     init(worktimerSetByUser : Int, resttimerSetByUser: Int){
@@ -29,14 +29,14 @@ class timerManager : DataDelegate {
 //MARK:
 //MARK: delegate functions
     
-    func userDidSelectWorkTime(workTime: Double) {
+    func userDidSelectWorkTime(_ workTime: Double) {
       
         // called when user adjust the wheel
         appDelegate.workTimeValue = Int(workTime)
     }
     
     
-    func userDidSelectRestTime(restTime: Double) {
+    func userDidSelectRestTime(_ restTime: Double) {
         
         appDelegate.restTimeValue = Int(restTime)
     }
