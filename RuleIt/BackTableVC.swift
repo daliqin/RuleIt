@@ -9,34 +9,20 @@
 import Foundation
 
 class BackTableVC: UITableViewController {
-    
-    
     @IBOutlet var backTableView: UITableView!
     var tableArray = [String]()
 
     override func viewDidLoad() {
-        
         tableArray = ["Home", "Action", "Settings"]
         self.revealViewController().rearViewRevealWidth = self.view.frame.width / 3.3
-        
-//        let frame = CGRectMake(0, 0, self.view.frame.size.width, 140)
-//        let footerImageView = UIImageView(frame: frame)
-//        let image: UIImage = UIImage(named: "transparentBG.png")!
-//        footerImageView.image = image
-//        footerImageView.contentMode = UIViewContentMode.ScaleAspectFit
-//        footerImageView.alignmentRectInsets()
-//        backTableView.tableFooterView = footerImageView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: tableArray[indexPath.row], for: indexPath) as UITableViewCell
-        
         cell.textLabel?.text = tableArray[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         cell.selectionStyle = UITableViewCellSelectionStyle.gray
         cell.textLabel?.highlightedTextColor = UIColor.black
-        
         return cell
     }
     
@@ -45,41 +31,33 @@ class BackTableVC: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
         switch indexPath.row {
         case 0:
             popAlertView("Are you sure you want to stop the timer to restart it?", identifier: "home")
             break;
         case 1:
-            
             popAlertView("Are you sure you want to stop the timer to go to action page?", identifier: "action")
-           
             break;
         case 2:
             popAlertView("Are you sure you want to stop the timer to go to settings page?", identifier: "settings")
             break;
-            
         default:
             break;
-        
         }
     }
     
 // MARK: table view header
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "I.V.ELITE"
+        return "HO:UR"
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-       
         let title = self.tableView(tableView, titleForHeaderInSection: section)
-        if (title == "I.V.ELITE") {
+        if (title == "HO:UR") {
             return 45.0
         }
         return 15.0
@@ -88,22 +66,8 @@ class BackTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
         let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.font = UIFont(name: "Digital dream Fat", size: 11)!
-        //header.textLabel?.textColor = UIColor.lightGrayColor()
+        header.textLabel?.font = UIFont(name: "Digital dream Fat", size: 14)!
     }
-    
-//    // MARK: table view footer
-//    
-//    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        return "To /nyour /nsuccess"
-//    }
-//    
-//    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//
-//        return 260.0
-//    }
-    
-    // MARK: helper func
     
     func popAlertView(_ msgBody: String, identifier: String) {
         if isClockInWorkingMode {
@@ -120,18 +84,6 @@ class BackTableVC: UITableViewController {
         } else {
             self.performSegue(withIdentifier: identifier, sender: self)
         }
-
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
 

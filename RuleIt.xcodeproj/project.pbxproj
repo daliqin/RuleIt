@@ -31,11 +31,9 @@
 		2B6476901CFC12FD0073C165 /* play.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B64768F1CFC12FD0073C165 /* play.wav */; };
 		2B8FC2541D07A537008B167E /* beepLong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B8FC2531D07A537008B167E /* beepLong.wav */; };
 		2B9940F91D2F309D00FA77BD /* Time-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F68791CFF73D6009FC076 /* Time-64.png */; };
-		2BA4614F1D30247800EDFF60 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA4614E1D30247800EDFF60 /* Logo.png */; };
 		2BA4615F1D303AF600EDFF60 /* starLG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA4615E1D303AF600EDFF60 /* starLG.png */; };
 		2BA461631D303C6300EDFF60 /* starBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BA461621D303C6300EDFF60 /* starBG.jpg */; };
 		2BA461651D30696000EDFF60 /* launchBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BA461641D30696000EDFF60 /* launchBG.jpg */; };
-		2BBC427F1D25DA97004E8B91 /* help image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BBC427E1D25DA97004E8B91 /* help image.jpg */; };
 		2BBC42831D25F355004E8B91 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BBC42801D25F355004E8B91 /* feedback.png */; };
 		2BBC42841D25F355004E8B91 /* rate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BBC42811D25F355004E8B91 /* rate.png */; };
 		2BBC42851D25F355004E8B91 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BBC42821D25F355004E8B91 /* share.png */; };
@@ -75,6 +73,10 @@
 		36C4756C1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756A1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf */; };
 		36C4756D1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */; };
 		4749EEA0AC05E5609239CAE4 /* Pods_RuleIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */; };
+		D67B4C841E70D9F5009550DE /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = D67B4C831E70D9F5009550DE /* hour.png */; };
+		D67B4C8C1E71E1EA009550DE /* gradient4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D67B4C891E71E1EA009550DE /* gradient4.jpg */; };
+		D68F78991E7C5FD5003087C9 /* help image.png in Resources */ = {isa = PBXBuildFile; fileRef = D68F78981E7C5FD5003087C9 /* help image.png */; };
+		D68F789B1E7C6C9C003087C9 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D68F789A1E7C6C9C003087C9 /* chime.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,11 +117,9 @@
 		2B64768D1CF7BDDD0073C165 /* restDone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = restDone.wav; sourceTree = "<group>"; };
 		2B64768F1CFC12FD0073C165 /* play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = play.wav; sourceTree = "<group>"; };
 		2B8FC2531D07A537008B167E /* beepLong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beepLong.wav; sourceTree = "<group>"; };
-		2BA4614E1D30247800EDFF60 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		2BA4615E1D303AF600EDFF60 /* starLG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starLG.png; sourceTree = "<group>"; };
 		2BA461621D303C6300EDFF60 /* starBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starBG.jpg; sourceTree = "<group>"; };
 		2BA461641D30696000EDFF60 /* launchBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchBG.jpg; sourceTree = "<group>"; };
-		2BBC427E1D25DA97004E8B91 /* help image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "help image.jpg"; sourceTree = "<group>"; };
 		2BBC42801D25F355004E8B91 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
 		2BBC42811D25F355004E8B91 /* rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rate.png; sourceTree = "<group>"; };
 		2BBC42821D25F355004E8B91 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		2BFEAAF31D1874FB004E316D /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		2BFEAAF51D188EBC004E316D /* Timeguru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timeguru.png; sourceTree = "<group>"; };
 		360EA5021CBEECA800394402 /* skip colored.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skip colored.png"; sourceTree = "<group>"; };
-		363E3BA11CAC4F6800ECAAB9 /* Interval Timer Elite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interval Timer Elite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		363E3BA11CAC4F6800ECAAB9 /* Hour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		363E3BA61CAC4F6800ECAAB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		363E3BA91CAC4F6800ECAAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +165,10 @@
 		36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFATSKEW.ttf; sourceTree = "<group>"; };
 		4BCF8D96A6CEC6EFC51521B6 /* Pods-RuleIt.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.distribution.xcconfig"; sourceTree = "<group>"; };
 		4D75911BDB18911EDDAD3477 /* Pods-RuleIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.release.xcconfig"; sourceTree = "<group>"; };
+		D67B4C831E70D9F5009550DE /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
+		D67B4C891E71E1EA009550DE /* gradient4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient4.jpg; sourceTree = "<group>"; };
+		D68F78981E7C5FD5003087C9 /* help image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help image.png"; sourceTree = "<group>"; };
+		D68F789A1E7C6C9C003087C9 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuleIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,7 +219,7 @@
 		363E3BA21CAC4F6800ECAAB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				363E3BA11CAC4F6800ECAAB9 /* Interval Timer Elite.app */,
+				363E3BA11CAC4F6800ECAAB9 /* Hour.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,11 +263,12 @@
 				2BA461641D30696000EDFF60 /* launchBG.jpg */,
 				2BA4615E1D303AF600EDFF60 /* starLG.png */,
 				2BA461621D303C6300EDFF60 /* starBG.jpg */,
-				2BA4614E1D30247800EDFF60 /* Logo.png */,
 				2BBC42801D25F355004E8B91 /* feedback.png */,
 				2BBC42811D25F355004E8B91 /* rate.png */,
 				2BBC42821D25F355004E8B91 /* share.png */,
 				2BFEAAF51D188EBC004E316D /* Timeguru.png */,
+				D67B4C891E71E1EA009550DE /* gradient4.jpg */,
+				D67B4C831E70D9F5009550DE /* hour.png */,
 				2B2F68791CFF73D6009FC076 /* Time-64.png */,
 				3680D4C61CB482A000C55381 /* menu.png */,
 				2B2F686F1CFF70FE009FC076 /* add1m.png */,
@@ -296,12 +301,13 @@
 				2BF4F3281D25CE0800F59C86 /* arrow-bottom.imageset */,
 				2BF4F32D1D25CE0800F59C86 /* arrow-top.imageset */,
 				2B3E89B31D0B8F2600D31FED /* tutorial.PNG */,
-				2BBC427E1D25DA97004E8B91 /* help image.jpg */,
+				D68F78981E7C5FD5003087C9 /* help image.png */,
 				2BFEAAF31D1874FB004E316D /* btn.wav */,
 				2B64768F1CFC12FD0073C165 /* play.wav */,
 				2B2F68491CFE984E009FC076 /* blip.wav */,
 				2B2F68911CFF807C009FC076 /* pop.wav */,
 				2B2F684B1CFE9963009FC076 /* btnLoud.wav */,
+				D68F789A1E7C6C9C003087C9 /* chime.mp3 */,
 				2B2F68471CFE97CF009FC076 /* next.wav */,
 				2B2F683D1CFE6E9A009FC076 /* stop.wav */,
 				2B64768D1CF7BDDD0073C165 /* restDone.wav */,
@@ -363,7 +369,7 @@
 			);
 			name = RuleIt;
 			productName = RuleIt;
-			productReference = 363E3BA11CAC4F6800ECAAB9 /* Interval Timer Elite.app */;
+			productReference = 363E3BA11CAC4F6800ECAAB9 /* Hour.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -380,6 +386,7 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = GYMMFU2F5S;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -424,7 +431,9 @@
 				2BA4615F1D303AF600EDFF60 /* starLG.png in Resources */,
 				2B6476881CF6737D0073C165 /* door.wav in Resources */,
 				2B2F688E1CFF7DDB009FC076 /* play.png in Resources */,
+				D67B4C8C1E71E1EA009550DE /* gradient4.jpg in Resources */,
 				2B64768E1CF7BDDD0073C165 /* restDone.wav in Resources */,
+				D68F78991E7C5FD5003087C9 /* help image.png in Resources */,
 				2B2F68901CFF7DE2009FC076 /* pause.png in Resources */,
 				2B8FC2541D07A537008B167E /* beepLong.wav in Resources */,
 				2BF4F3331D25CE0800F59C86 /* arrow-bottom@2x.png in Resources */,
@@ -435,9 +444,9 @@
 				2BF4F3391D25CE0800F59C86 /* Contents.json in Resources */,
 				2B2F688C1CFF7C07009FC076 /* lowVolume.png in Resources */,
 				36C4756C1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf in Resources */,
-				2BA4614F1D30247800EDFF60 /* Logo.png in Resources */,
 				2B2F684C1CFE9963009FC076 /* btnLoud.wav in Resources */,
 				2B2F68701CFF70FE009FC076 /* add1m.png in Resources */,
+				D67B4C841E70D9F5009550DE /* hour.png in Resources */,
 				3680D4B51CB46BA500C55381 /* skip.png in Resources */,
 				2B2F687C1CFF76DE009FC076 /* autoSwitchColored.png in Resources */,
 				2BA461631D303C6300EDFF60 /* starBG.jpg in Resources */,
@@ -455,9 +464,9 @@
 				2BFEAAF41D1874FB004E316D /* btn.wav in Resources */,
 				2BF4F3361D25CE0800F59C86 /* arrow-top.png in Resources */,
 				2BF4F3321D25CE0800F59C86 /* arrow-bottom.png in Resources */,
+				D68F789B1E7C6C9C003087C9 /* chime.mp3 in Resources */,
 				2B2F684A1CFE984E009FC076 /* blip.wav in Resources */,
 				2B2F683E1CFE6E9A009FC076 /* stop.wav in Resources */,
-				2BBC427F1D25DA97004E8B91 /* help image.jpg in Resources */,
 				2B6476901CFC12FD0073C165 /* play.wav in Resources */,
 				2BF4F3341D25CE0800F59C86 /* arrow-bottom@3x.png in Resources */,
 				2B2F68441CFE7270009FC076 /* beep.wav in Resources */,
@@ -510,7 +519,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		87805F9829F77AF7180F286F /* [CP] Copy Pods Resources */ = {
@@ -621,7 +630,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = GYMMFU2F5S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,8 +642,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = "Interval Timer Elite";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = Hour;
+				PROVISIONING_PROFILE = "29020b71-de22-4f31-aa1a-17f4b2730e95";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.ruleit.RuleIt";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -733,7 +745,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = GYMMFU2F5S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -743,8 +757,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = "Interval Timer Elite";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = Hour;
+				PROVISIONING_PROFILE = "29020b71-de22-4f31-aa1a-17f4b2730e95";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.ruleit.RuleIt";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -759,7 +774,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 9;
+				DEVELOPMENT_TEAM = GYMMFU2F5S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,8 +786,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = "Interval Timer Elite";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = Hour;
+				PROVISIONING_PROFILE = "29020b71-de22-4f31-aa1a-17f4b2730e95";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.ruleit.RuleIt";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

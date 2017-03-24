@@ -1,0 +1,88 @@
+# If you want to automatically update fastlane if a new version is available:
+ update_fastlane
+
+# This is the minimum version number required.
+fastlane_version "2.22.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    cocoapods
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    # match(type: "appstore") # more information: https://codesigning.guide
+    # gym # Build your app - more options available
+    # pilot
+
+    cert
+    sigh(force: true)
+    increment_build_number
+
+    gym(scheme: "RuleIt",
+        use_legacy_build_api: true, # temporary fix for the exporting issue
+        clean: true,
+        workspace: "RuleIt.xcworkspace")
+
+    # solve a strange error occur for pilot (" Could not start delivery: all transports failed diagnostics")
+    ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t DAV"
+    pilot
+    # sh "your_script.sh"
+  end
+
+  lane :matchBeta do
+  update_project_codesigning(path: "~/Documents/My business/Time Infinity/RuleIt.xcodeproj",
+  use_automatic_signing: false)
+  match(git_url: "ssh://git@git.bestbuy.com/~charles.chin/match-hour.git",
+     type: 'appstore',
+     app_identifier: "com.ruleit.RuleIt")
+  update_provisioning_profile_specifier(project: "~/Documents/My business/Time Infinity/RuleIt.xcodeproj",
+  prov_name: "AppStore_com.ruleit.RuleIt.mobileprovision",
+  build_configuration: "Release")
+  gym(scheme: "RuleIt",
+      use_legacy_build_api: true,                                                  # fix for the exporting issue
+      clean: true,
+      workspace: "RuleIt.xcworkspace")
+  ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t DAV"           # solve a strange error occur for pilot/testflight:
+                                                                                   # (“ Could not start delivery: all transports failed diagnostics")
+  pilot
+  update_project_codesigning(path: "DIRECTORY_TO_PROJECT/Bestbuy-mApp.xcodeproj",  # change it back to auto-signing
+                             use_automatic_signing: true)
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    # match(type: "appstore")
+    # snapshot
+    gym # Build your app - more options available
+    deliver(force: true)
+    # frameit
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer

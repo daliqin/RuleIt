@@ -106,7 +106,7 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
             headsupMsg.alpha = 0
         } else {
             headsupMsg.alpha = 1
-            headsupMsg.textColor = UIColor.orange
+            headsupMsg.textColor = UIColor.yellow
         }
         
     }

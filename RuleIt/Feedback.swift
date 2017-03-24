@@ -24,12 +24,12 @@ class Action: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let email = "time.Infinity@yahoo.com"
+            let email = "dcharleschin@yahoo.com"
             let url = URL(string: "mailto:\(email)")
             UIApplication.shared.openURL(url!)
         }
         if indexPath.row == 1 {
-            let activityViewController = UIActivityViewController(activityItems: ["Check out this Interval Timer Elite app at: itunes.apple.com/app/id1130529290" as NSString], applicationActivities: nil)
+            let activityViewController = UIActivityViewController(activityItems: ["This app is pretty legit. AppStore link: itunes.apple.com/app/id1130529290" as NSString], applicationActivities: nil)
             present(activityViewController, animated: true, completion: {})
             
         }

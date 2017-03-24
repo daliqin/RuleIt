@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let suspendedTimeSpot = Date()
         userDefaults.setValue(suspendedTimeSpot, forKey: "TimeSpot")
         
-        if isTimerActive && isStartPressed && timeleft != 0 {
+        if isTimerActive && isStartPressed && timeleft != 0 && timeleft != 1{
       
             let notification = UILocalNotification()
             notification.fireDate = Date(timeIntervalSinceNow: timeleft)
