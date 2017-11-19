@@ -34,7 +34,7 @@ class Action: UITableViewController {
             
         }
         if indexPath.row == 2 {
-            UIApplication.shared.openURL(URL(string : "itms-apps://itunes.apple.com/app/id1130529290")!)
+            InAppReivew().showReivewInFeedback()
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
