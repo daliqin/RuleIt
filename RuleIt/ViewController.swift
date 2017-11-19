@@ -68,12 +68,12 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     // instruction view
     let pointOfInterest = UIView()
     var coachMarksController: CoachMarksController?
-    let workTimeText = "Hi there! Quick walk-through? \nTimer can be operated in 2 modes:  \nWORKING 💪 and RESTING 😪. \n\nThis indicates your work duration, which can be changed later"
+    let workTimeText = "Tap anywhere on screen for a 5 sec walk through! \n\nTimer runs between 2 modes:  \nworking 💪 and resting 😪. \n\nThis indicates your work duration, which can be changed later"
     let restTimeText = "This is the rest-mode duration"
     let addMinText = "In case you are running short on time but want to keep going, this adds minutes on the go!"
     let autoSwitchText = "Switching this on will automatically transition between work & rest. Sweet!"
-    let skipRestText = "In case you want to skip the rest all together, enable this will keep your timer in working mode."
-    let volumeControlText = "Button and the alert sound volume control. \nYou can turn off button sound effect in Settings ⚙. \n\n🎉That's it!! Enjoy!!!😁"
+    let skipRestText = "In case you want to skip the rest all together, enable this will keep your timer in working mode only."
+    let volumeControlText = "Button and the alert sound volume control. \nYou can turn off button sound effect in Settings. \n\nThat's it!! Thanks for trying out!!!🙌"
 
     //MARK:
     //MARK: LifeCycle & Notification
@@ -224,7 +224,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
                             }
                         }
                     } else {
-                        playSoundEffect("chime.mp3", soundTwo: "chime.mp3", loops: 1, vibration: true)
+                        playSoundEffect("complete.wav", soundTwo: "complete.wav", loops: 0, vibration: true)
                     }
                 }
                 isWorktimeClockActive ? (status.text = "Work done") : (status.text = "Rest done")
@@ -340,7 +340,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
             plusOneMin.alpha = 1
             timer.textColor = UIColor.white
             if btnSoundEffect {
-                playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+                playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
             }
             
             if !isStartPressed{
@@ -406,7 +406,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     @IBAction func plusOneMin(_ sender: AnyObject) {
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         secondCountdown += 60
         progress = progress * Float((presetTime / (presetTime + 60)))
@@ -438,7 +438,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     @IBAction func skipRestBtnAction(_ sender: AnyObject) {
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         oldStatusText = status.text!
         if skipRest {
@@ -458,7 +458,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     @IBAction func autoSwitchBtnAction(_ sender: AnyObject) {
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         oldStatusText = status.text!
 
@@ -485,7 +485,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     @IBAction func currentTimeAction(_ sender: AnyObject) {
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         if displayingAMPM {
             let date = Date()
@@ -506,7 +506,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     @IBAction func currentDateAction(_ sender: AnyObject) {
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         
         if displayingDate {
@@ -552,14 +552,14 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     @IBAction func volumeUp(_ sender: AnyObject) {
         volumeBar.value += 0.1
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
     }
     
     @IBAction func volumeDown(_ sender: AnyObject) {
         volumeBar.value -= 0.1
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
     }
     
@@ -711,7 +711,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     
     func stopTimer() {
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         
         if myAppDelegate.countdownTimer != nil {
@@ -752,6 +752,8 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         if autoSwitchTimer != nil {
             autoSwitchIntervalTimerInvalid()
         }
+        
+        InAppReivew().showReview()
     }
     
     func switchToNextPhase() {
@@ -759,7 +761,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         UIView.transition(with: self.status, duration: 0.3, options: [.transitionCrossDissolve], animations: nil, completion: nil)
         
         if btnSoundEffect {
-            playSoundEffect("btn.wav", soundTwo: "btn.wav", loops: 0, vibration: false)
+            playSoundEffect("click.wav", soundTwo: "click.wav", loops: 0, vibration: false)
         }
         
         if isWorktimeClockActive {

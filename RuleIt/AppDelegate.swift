@@ -40,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // increment app run counter for in app review
+        InAppReivew().incrementAppRuns()
+        
         if UserDefaults.standard.object(forKey: "workTime") == nil {
             workTimeValue = 30
         } else {
@@ -87,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let notification = UILocalNotification()
             notification.fireDate = Date(timeIntervalSinceNow: timeleft)
             notification.alertBody = "Times up! Respond to start next phase"
-            notification.soundName = "beepLong.wav"
+            notification.soundName = "complete.wav"
             UIApplication.shared.scheduleLocalNotification(notification)
             //isNewSession = false
         }

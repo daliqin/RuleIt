@@ -77,6 +77,9 @@
 		D67B4C8C1E71E1EA009550DE /* gradient4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D67B4C891E71E1EA009550DE /* gradient4.jpg */; };
 		D68F78991E7C5FD5003087C9 /* help image.png in Resources */ = {isa = PBXBuildFile; fileRef = D68F78981E7C5FD5003087C9 /* help image.png */; };
 		D68F789B1E7C6C9C003087C9 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D68F789A1E7C6C9C003087C9 /* chime.mp3 */; };
+		D6EFBF661FBE4FF000B7358B /* complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6EFBF651FBE4CCD00B7358B /* complete.wav */; };
+		D6EFBF681FBE548D00B7358B /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6EFBF671FBE547800B7358B /* click.wav */; };
+		D6FFC5611FC1039D00BEA943 /* InAppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FFC5601FC1039D00BEA943 /* InAppReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -165,10 +168,17 @@
 		36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFATSKEW.ttf; sourceTree = "<group>"; };
 		4BCF8D96A6CEC6EFC51521B6 /* Pods-RuleIt.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.distribution.xcconfig"; sourceTree = "<group>"; };
 		4D75911BDB18911EDDAD3477 /* Pods-RuleIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.release.xcconfig"; sourceTree = "<group>"; };
+		D6481D011FBB9B9B00B6C356 /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
+		D6481D021FBB9B9C00B6C356 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		D6481D031FBB9B9C00B6C356 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
+		D6481D041FBB9B9C00B6C356 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		D67B4C831E70D9F5009550DE /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		D67B4C891E71E1EA009550DE /* gradient4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient4.jpg; sourceTree = "<group>"; };
 		D68F78981E7C5FD5003087C9 /* help image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help image.png"; sourceTree = "<group>"; };
 		D68F789A1E7C6C9C003087C9 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
+		D6EFBF651FBE4CCD00B7358B /* complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = complete.wav; sourceTree = "<group>"; };
+		D6EFBF671FBE547800B7358B /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		D6FFC5601FC1039D00BEA943 /* InAppReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReview.swift; sourceTree = "<group>"; };
 		FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuleIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -228,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */,
+				D6FFC5601FC1039D00BEA943 /* InAppReview.swift */,
 				363E3BC51CADEF1F00ECAAB9 /* menus */,
 				363E3BBD1CAC846900ECAAB9 /* BackTableVC.swift */,
 				363E3BC31CAC969A00ECAAB9 /* RightViewVC.swift */,
@@ -282,6 +293,10 @@
 				2B2F688F1CFF7DE2009FC076 /* pause.png */,
 				2B2F68891CFF7BFC009FC076 /* highVolume.png */,
 				2B2F688B1CFF7C07009FC076 /* lowVolume.png */,
+				D6481D021FBB9B9C00B6C356 /* background1.jpg */,
+				D6481D041FBB9B9C00B6C356 /* background2.jpg */,
+				D6481D031FBB9B9C00B6C356 /* background3.jpg */,
+				D6481D011FBB9B9B00B6C356 /* background4.jpg */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -310,7 +325,9 @@
 				D68F789A1E7C6C9C003087C9 /* chime.mp3 */,
 				2B2F68471CFE97CF009FC076 /* next.wav */,
 				2B2F683D1CFE6E9A009FC076 /* stop.wav */,
+				D6EFBF651FBE4CCD00B7358B /* complete.wav */,
 				2B64768D1CF7BDDD0073C165 /* restDone.wav */,
+				D6EFBF671FBE547800B7358B /* click.wav */,
 				2B2F68431CFE7270009FC076 /* beep.wav */,
 				2B8FC2531D07A537008B167E /* beepLong.wav */,
 				2B64768B1CF7BDCE0073C165 /* workDone.wav */,
@@ -384,9 +401,9 @@
 				TargetAttributes = {
 					363E3BA01CAC4F6800ECAAB9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = GYMMFU2F5S;
+						DevelopmentTeam = VYHG9U4J53;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -418,6 +435,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6EFBF681FBE548D00B7358B /* click.wav in Resources */,
+				D6EFBF661FBE4FF000B7358B /* complete.wav in Resources */,
 				2B9940F91D2F309D00FA77BD /* Time-64.png in Resources */,
 				2B64768A1CF7BB7C0073C165 /* lowbeep.wav in Resources */,
 				36C475691CBC66F400FCEB36 /* digital-7 (mono).ttf in Resources */,
@@ -547,6 +566,7 @@
 				363E3BC01CAC8D2E00ECAAB9 /* Settings.swift in Sources */,
 				2BF4F31F1D25CA8A00F59C86 /* CustomCoachMarkBodyView.swift in Sources */,
 				2BF4F3221D25CBB500F59C86 /* TransparentCoachMarkArrowView.swift in Sources */,
+				D6FFC5611FC1039D00BEA943 /* InAppReview.swift in Sources */,
 				363E3BAD1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld in Sources */,
 				363E3BBE1CAC846900ECAAB9 /* BackTableVC.swift in Sources */,
 				2BF4F3231D25CBB500F59C86 /* TransparentCoachMarkBodyView.swift in Sources */,
@@ -630,9 +650,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = GYMMFU2F5S;
+				DEVELOPMENT_TEAM = VYHG9U4J53;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,8 +664,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
 				PRODUCT_NAME = Hour;
-				PROVISIONING_PROFILE = "29020b71-de22-4f31-aa1a-17f4b2730e95";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.ruleit.RuleIt";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -745,9 +766,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = GYMMFU2F5S;
+				DEVELOPMENT_TEAM = VYHG9U4J53;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -758,8 +780,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
 				PRODUCT_NAME = Hour;
-				PROVISIONING_PROFILE = "29020b71-de22-4f31-aa1a-17f4b2730e95";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.ruleit.RuleIt";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -774,9 +796,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = GYMMFU2F5S;
+				DEVELOPMENT_TEAM = VYHG9U4J53;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -787,8 +810,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
 				PRODUCT_NAME = Hour;
-				PROVISIONING_PROFILE = "29020b71-de22-4f31-aa1a-17f4b2730e95";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.ruleit.RuleIt";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

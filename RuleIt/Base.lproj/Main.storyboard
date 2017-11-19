@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PGD-30-dL2">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PGD-30-dL2">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,6 +19,9 @@
         <array key="DIGITALDREAMFATSKEW.ttf">
             <string>DigitaldreamFatSkew</string>
         </array>
+        <array key="Menlo.ttc">
+            <string>Menlo-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Reveal View Controller-->
@@ -30,7 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3X6-Bo-oOx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Q96-PL-Cbj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -52,7 +55,7 @@
                 <navigationController id="jev-FX-RDN" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="NT0-qH-rWy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -66,9 +69,9 @@
         <!--Back TableVC-->
         <scene sceneID="lai-uB-zvn">
             <objects>
-                <tableViewController id="hhz-VA-cw5" customClass="BackTableVC" customModule="HOUR" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hhz-VA-cw5" customClass="BackTableVC" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="w7U-Rb-8aO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,30 +80,30 @@
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" id="Hzl-xq-P7N">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hzl-xq-P7N" id="C14-kr-UrS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Action" id="56w-SQ-ShA">
-                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="56w-SQ-ShA" id="6cJ-pa-1cb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settings" id="Aue-1d-D6S">
-                                <rect key="frame" x="0.0" y="144" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="143.33333333333334" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aue-1d-D6S" id="adn-4f-1SL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
@@ -128,20 +131,20 @@
         <!--Right ViewVC-->
         <scene sceneID="SJx-IQ-f7c">
             <objects>
-                <viewController storyboardIdentifier="rightVC" id="H84-pY-5ZX" customClass="RightViewVC" customModule="HOUR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightVC" id="H84-pY-5ZX" customClass="RightViewVC" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nDR-cN-7zH"/>
                         <viewControllerLayoutGuide type="bottom" id="vbe-qR-euv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KOm-cm-jqA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azC-xd-V5A">
-                                <rect key="frame" x="1" y="-1" width="375" height="335"/>
+                                <rect key="frame" x="1" y="-1" width="414" height="369.66666666666669"/>
                                 <subviews>
                                     <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muQ-xO-EOv">
-                                        <rect key="frame" x="56.5" y="51.5" width="306" height="243"/>
+                                        <rect key="frame" x="76.333333333333314" y="68.333333333333314" width="306" height="243"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="muQ-xO-EOv" secondAttribute="height" multiplier="34:27" id="cwi-jo-ZII"/>
@@ -154,7 +157,7 @@
                                         </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-IX-0Sf">
-                                        <rect key="frame" x="86" y="21.5" width="247" height="55"/>
+                                        <rect key="frame" x="105.33333333333331" y="37.666666666666671" width="249" height="55.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="4ns-pQ-Ncp"/>
                                             <constraint firstAttribute="width" constant="247" id="d1K-pt-8PK"/>
@@ -165,7 +168,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Hr     Min     Sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-xf-jmE">
-                                        <rect key="frame" x="115" y="145.5" width="247" height="55"/>
+                                        <rect key="frame" x="154" y="162.33333333333334" width="247" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="247" id="7xM-iG-jRv"/>
                                             <constraint firstAttribute="height" constant="55" id="UXS-ms-jCp"/>
@@ -176,7 +179,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stop timer to adjust time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8s-ar-vqM">
-                                        <rect key="frame" x="98.5" y="309" width="240" height="26"/>
+                                        <rect key="frame" x="118.33333333333331" y="343.66666666666669" width="240" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="h8s-ar-vqM" secondAttribute="height" multiplier="337:31" constant="-42.645161290322562" id="CmD-N7-QWJ"/>
                                         </constraints>
@@ -207,7 +210,7 @@
                                 </variation>
                             </view>
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfc-I5-3GI">
-                                <rect key="frame" x="60" y="384" width="306" height="243"/>
+                                <rect key="frame" x="79.666666666666686" y="418.66666666666663" width="306" height="242.99999999999989"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="243" id="NfB-Dz-aTD"/>
@@ -228,7 +231,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Hr     Min     Sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-2V-H38">
-                                <rect key="frame" x="119" y="478" width="247" height="55"/>
+                                <rect key="frame" x="158" y="512.66666666666663" width="247" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="4TP-4W-b3u"/>
                                     <constraint firstAttribute="width" constant="247" id="8Xj-uH-a5W"/>
@@ -239,7 +242,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resting Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-UO-AKV">
-                                <rect key="frame" x="90" y="344" width="247" height="55"/>
+                                <rect key="frame" x="109.66666666666669" y="378.66666666666669" width="247" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Bw-UO-AKV" secondAttribute="height" multiplier="247:55" id="akp-q4-1dx"/>
                                     <constraint firstAttribute="width" constant="247" id="dKl-To-g5O"/>
@@ -292,9 +295,9 @@
         <!--Settings-->
         <scene sceneID="GvJ-xH-tGo">
             <objects>
-                <tableViewController id="7Jk-eP-ehQ" customClass="Settings" customModule="HOUR" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7Jk-eP-ehQ" customClass="Settings" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="J3D-0w-xho">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1012848985" green="0.1012848985" blue="0.1012848985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -303,14 +306,14 @@
                             <tableViewSection id="hdM-Qs-EF2">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dS6-wv-qwu">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dS6-wv-qwu" id="Bh7-ZM-v7c">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omX-Zv-CAP">
-                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="357" y="6" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="omX-Zv-CAP" secondAttribute="height" multiplier="49:31" id="f4s-Mu-Bjn"/>
                                                     </constraints>
@@ -341,10 +344,10 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Out-pl-2eG">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Out-pl-2eG" id="0Dc-32-J9X">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen stays lit while running" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRl-re-MGv">
@@ -357,7 +360,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-Rh-EtB">
-                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="357" y="6" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DtL-Rh-EtB" secondAttribute="height" multiplier="49:31" id="WPR-7f-263"/>
                                                     </constraints>
@@ -383,14 +386,14 @@
                             <tableViewSection id="LWa-Nw-Jx1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7iV-Fb-Cou" style="IBUITableViewCellStyleDefault" id="vOI-R3-tPa">
-                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vOI-R3-tPa" id="caP-IN-qNm">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Buttons cheatsheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7iV-Fb-Cou">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <rect key="frame" x="20" y="0.0" width="359" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -405,17 +408,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="version 2.0" id="Ouo-bA-Usn">
+                            <tableViewSection footerTitle="version 3.0" id="Ouo-bA-Usn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8zn-1B-eja" style="IBUITableViewCellStyleDefault" id="gsR-jS-EFT">
-                                        <rect key="frame" x="0.0" y="239" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="239" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsR-jS-EFT" id="ihD-hC-lJU">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About Hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="8zn-1B-eja">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <rect key="frame" x="20" y="0.0" width="359" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -454,17 +457,17 @@
         <!--About Hour-->
         <scene sceneID="ssA-ca-Wbo">
             <objects>
-                <viewController id="jcH-Bo-Cb0" customClass="about" customModule="HOUR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jcH-Bo-Cb0" customClass="about" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qxL-KT-lYf"/>
                         <viewControllerLayoutGuide type="bottom" id="gzb-3D-X4Z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dc1-JW-ycb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hour.png" translatesAutoresizingMaskIntoConstraints="NO" id="BnP-LO-U47">
-                                <rect key="frame" x="153.5" y="117" width="68" height="65"/>
+                                <rect key="frame" x="173" y="117" width="68" height="65"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BnP-LO-U47" secondAttribute="height" multiplier="68:65" id="lXN-aH-24m"/>
@@ -472,8 +475,8 @@
                                     <constraint firstAttribute="height" constant="65" id="uLY-71-IUK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf3-a5-gxK">
-                                <rect key="frame" x="144.5" y="190" width="86" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 3.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf3-a5-gxK">
+                                <rect key="frame" x="164" y="190" width="86" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="2AV-il-MYl"/>
                                     <constraint firstAttribute="width" secondItem="mf3-a5-gxK" secondAttribute="height" multiplier="86:21" id="7Fc-aA-22F"/>
@@ -484,7 +487,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-Y2-ApZ">
-                                <rect key="frame" x="33" y="219" width="309" height="249"/>
+                                <rect key="frame" x="52.666666666666657" y="219" width="309" height="249"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="BWM-GW-doG"/>
                                     <constraint firstAttribute="width" secondItem="Sbe-Y2-ApZ" secondAttribute="height" multiplier="103:83" id="CnX-Os-TbH"/>
@@ -523,11 +526,11 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                         <viewControllerLayoutGuide type="bottom" id="5Jb-jR-PWL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m0q-Mn-njJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help image.png" translatesAutoresizingMaskIntoConstraints="NO" id="UG8-7E-1Zn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -549,7 +552,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                 <navigationController id="QuD-i6-F3d" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="6Yw-BT-ATY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -563,9 +566,9 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
         <!--ACTION-->
         <scene sceneID="vKT-TK-q2z">
             <objects>
-                <tableViewController storyboardIdentifier="action" id="ePB-HH-X6U" customClass="Action" customModule="HOUR" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="action" id="ePB-HH-X6U" customClass="Action" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Txv-G4-5JH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -574,26 +577,26 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                             <tableViewSection id="NSA-Kp-waD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="dZ5-vo-q0i">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZ5-vo-q0i" id="BTR-dH-Otc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjT-XU-x0E">
-                                                    <rect key="frame" x="50" y="99.5" width="275" height="35"/>
+                                                    <rect key="frame" x="69.666666666666686" y="99.333333333333343" width="275" height="35.000000000000028"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="2BY-Zs-45q"/>
                                                         <constraint firstAttribute="width" secondItem="WjT-XU-x0E" secondAttribute="height" multiplier="92:15" constant="60.333333333333314" id="3EE-sm-3lf"/>
                                                         <constraint firstAttribute="width" constant="275" id="LhQ-xk-ohZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Here's What I Think">
+                                                    <state key="normal" title="Your opinion matters">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback.png" translatesAutoresizingMaskIntoConstraints="NO" id="mFi-Wz-ykW">
-                                                    <rect key="frame" x="167.5" y="51.5" width="40" height="40"/>
+                                                    <rect key="frame" x="187" y="51.333333333333329" width="40" height="39.999999999999986"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="cWc-V8-p51"/>
                                                         <constraint firstAttribute="width" constant="40" id="rgR-Od-s9P"/>
@@ -611,14 +614,14 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="OYz-CS-zYP">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="200" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OYz-CS-zYP" id="CiA-dN-Rda">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-dV-pAG">
-                                                    <rect key="frame" x="167.5" y="59.5" width="40" height="40"/>
+                                                    <rect key="frame" x="187" y="59.666666666666671" width="40" height="40.000000000000014"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="QpT-dV-pAG" secondAttribute="height" multiplier="1:1" id="Gxk-qa-Cvw"/>
                                                         <constraint firstAttribute="width" constant="40" id="Xf1-RR-yQ0"/>
@@ -626,14 +629,14 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hII-im-KNb">
-                                                    <rect key="frame" x="48" y="107.5" width="279" height="35"/>
+                                                    <rect key="frame" x="67.666666666666686" y="107.66666666666666" width="279" height="34.999999999999972"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="279" id="2Wx-fu-QxN"/>
                                                         <constraint firstAttribute="height" constant="35" id="Xra-6a-z4b"/>
                                                         <constraint firstAttribute="width" secondItem="hII-im-KNb" secondAttribute="height" multiplier="217:30" constant="25.833333333333343" id="mpE-Gx-9OY"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="My Friend Might Use This">
+                                                    <state key="normal" title="Tell a friend about this app">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
@@ -648,26 +651,26 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="drd-ye-kw0">
-                                        <rect key="frame" x="0.0" y="400" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="400" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="drd-ye-kw0" id="lAD-Je-Rjy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-FV-WDs">
-                                                    <rect key="frame" x="48" y="107" width="279" height="35"/>
+                                                    <rect key="frame" x="67.666666666666686" y="107" width="279" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Hmv-aD-jdz"/>
                                                         <constraint firstAttribute="width" secondItem="Bm5-FV-WDs" secondAttribute="height" multiplier="199:30" constant="46.833333333333314" id="SSY-XN-RMv"/>
                                                         <constraint firstAttribute="width" constant="279" id="Uqk-4t-1kf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="My Satisfaction Level">
+                                                    <state key="normal" title="Give a rating on App Store">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-DU-0WP">
-                                                    <rect key="frame" x="134.5" y="69" width="30" height="30"/>
+                                                    <rect key="frame" x="154" y="69" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="9nj-rM-N0g"/>
                                                         <constraint firstAttribute="width" secondItem="GRx-DU-0WP" secondAttribute="height" multiplier="1:1" id="FBM-eB-BMg"/>
@@ -675,7 +678,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="euz-xS-54H">
-                                                    <rect key="frame" x="210.5" y="69" width="30" height="30"/>
+                                                    <rect key="frame" x="230" y="69" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="4We-i6-sE9"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="kDL-bB-tQT"/>
@@ -686,7 +689,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="8o0-2t-pdc">
-                                                    <rect key="frame" x="248.5" y="69" width="30" height="30"/>
+                                                    <rect key="frame" x="268" y="69" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30.5" id="F0s-Lm-Pbl"/>
                                                         <constraint firstAttribute="width" secondItem="8o0-2t-pdc" secondAttribute="height" multiplier="1:1" id="iJi-W2-nYK"/>
@@ -694,7 +697,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="FF1-1X-dRW">
-                                                    <rect key="frame" x="172.5" y="69" width="30" height="30"/>
+                                                    <rect key="frame" x="192" y="69" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="9x9-tX-DTr"/>
                                                         <constraint firstAttribute="width" secondItem="FF1-1X-dRW" secondAttribute="height" multiplier="1:1" id="Dpb-hF-oA4"/>
@@ -702,7 +705,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="P9p-Ou-kiM">
-                                                    <rect key="frame" x="96" y="68" width="31" height="31"/>
+                                                    <rect key="frame" x="115" y="68" width="31" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="31" id="48I-Hf-cXv"/>
                                                         <constraint firstAttribute="height" constant="31" id="ENF-FK-3KO"/>
@@ -728,10 +731,10 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="PS4-aY-hJS">
-                                        <rect key="frame" x="0.0" y="600" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="600" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PS4-aY-hJS" id="REr-b6-B0t">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -764,11 +767,10 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="9Ba-2A-Q74">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NBF-LE-Xfh">
-                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -782,13 +784,13 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
         <!--View Controller-->
         <scene sceneID="tLe-H8-cfj">
             <objects>
-                <viewController id="yax-8t-Vm9" customClass="ViewController" customModule="HOUR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yax-8t-Vm9" customClass="ViewController" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kjJ-im-zSb"/>
                         <viewControllerLayoutGuide type="bottom" id="JvA-mu-P97"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="To0-dy-Gix">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="the-rr-LdV">
@@ -797,10 +799,10 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyz-Ny-0ex">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="syL-WD-UiI">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainbackground" translatesAutoresizingMaskIntoConstraints="NO" id="syL-WD-UiI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -811,10 +813,10 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                     <constraint firstItem="syL-WD-UiI" firstAttribute="top" secondItem="iyz-Ny-0ex" secondAttribute="top" id="lgW-0A-KEe"/>
                                 </constraints>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-Uy-SJg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <visualEffectView opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-Uy-SJg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3cg-qX-awF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.043637628424657536" colorSpace="custom" customColorSpace="sRGB"/>
@@ -822,7 +824,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-iy-BFY">
-                                <rect key="frame" x="1" y="64" width="375" height="362"/>
+                                <rect key="frame" x="1" y="64" width="414" height="431"/>
                                 <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="74"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -830,7 +832,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <size key="shadowOffset" width="6" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riI-xd-PGP">
-                                <rect key="frame" x="158" y="498" width="60" height="60"/>
+                                <rect key="frame" x="177" y="563.33333333333337" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dVH-8U-mWR"/>
                                     <constraint firstAttribute="width" constant="60" id="fun-ou-Rbj"/>
@@ -846,7 +848,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD6-j6-db8">
-                                <rect key="frame" x="255" y="498" width="60" height="60"/>
+                                <rect key="frame" x="274" y="563.33333333333337" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fD6-j6-db8" secondAttribute="height" multiplier="1:1" id="3Yb-QJ-Hcg"/>
                                     <constraint firstAttribute="width" constant="60" id="gRF-bD-VzN"/>
@@ -859,7 +861,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oay-1Z-ero">
-                                <rect key="frame" x="2" y="431" width="60" height="60"/>
+                                <rect key="frame" x="2" y="500" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="1C7-KR-VJZ"/>
                                     <constraint firstAttribute="width" secondItem="oay-1Z-ero" secondAttribute="height" multiplier="1:1" id="hQo-Om-wJq"/>
@@ -874,7 +876,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxO-P5-2Hf">
-                                <rect key="frame" x="313" y="431" width="60" height="60"/>
+                                <rect key="frame" x="352" y="500" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YxO-P5-2Hf" secondAttribute="height" multiplier="1:1" id="LkB-fS-mYD"/>
                                     <constraint firstAttribute="width" constant="60" id="OCr-Kf-7VW"/>
@@ -887,7 +889,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R 15:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT5-pA-770">
-                                <rect key="frame" x="215" y="362" width="130" height="29"/>
+                                <rect key="frame" x="234.66666666666669" y="431" width="130.00000000000006" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Ddh-S7-xN8"/>
                                 </constraints>
@@ -896,7 +898,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W 1:15:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5Q-cD-D05">
-                                <rect key="frame" x="34" y="362" width="130" height="29"/>
+                                <rect key="frame" x="53.666666666666657" y="431" width="130" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="CD3-kk-HMR"/>
                                     <constraint firstAttribute="height" constant="29" id="FZd-dA-XXy"/>
@@ -906,13 +908,13 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="3Z9-w9-xOR">
-                                <rect key="frame" x="0.0" y="424" width="375" height="2.5"/>
+                                <rect key="frame" x="0.0" y="493" width="414" height="2.6666666666666856"/>
                                 <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="progressTintColor" red="0.19315293091146934" green="0.96822176866117848" blue="0.98106676340103149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="trackTintColor" red="0.06716887659251522" green="0.067833914974619325" blue="0.067833914974619325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-ca-LCo">
-                                <rect key="frame" x="20" y="638" width="159" height="21"/>
+                                <rect key="frame" x="20" y="707" width="159" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PXI-ca-LCo" secondAttribute="height" multiplier="53:7" id="26j-kU-Tc8"/>
                                     <constraint firstAttribute="width" constant="159" id="dio-rd-Kf1"/>
@@ -927,7 +929,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDV-IG-vku">
-                                <rect key="frame" x="201" y="638" width="154" height="21"/>
+                                <rect key="frame" x="240" y="707" width="154" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6TF-F7-uGU"/>
                                     <constraint firstAttribute="width" constant="154" id="9Bi-ZS-Yh9"/>
@@ -942,7 +944,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fku-fp-2s6">
-                                <rect key="frame" x="61" y="498" width="60" height="60"/>
+                                <rect key="frame" x="80" y="563.33333333333337" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="3Jx-6G-gUr"/>
                                     <constraint firstAttribute="width" secondItem="Fku-fp-2s6" secondAttribute="height" multiplier="1:1" id="K1A-H9-MmB"/>
@@ -957,7 +959,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XST-Vc-XZn">
-                                <rect key="frame" x="158" y="431" width="60" height="60"/>
+                                <rect key="frame" x="177" y="500" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XST-Vc-XZn" secondAttribute="height" multiplier="1:1" id="E8r-qP-mTa"/>
                                     <constraint firstAttribute="height" constant="60" id="Xki-1A-tG4"/>
@@ -970,7 +972,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <slider opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uDY-NN-7ou">
-                                <rect key="frame" x="54" y="584" width="266" height="32"/>
+                                <rect key="frame" x="58" y="649.33333333333348" width="297" height="35.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uDY-NN-7ou" secondAttribute="height" multiplier="127:15" id="Inb-iM-HcM"/>
                                 </constraints>
@@ -982,7 +984,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-jj-k38">
-                                <rect key="frame" x="317" y="570" width="60" height="60"/>
+                                <rect key="frame" x="352" y="639" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QVn-jj-k38" secondAttribute="height" multiplier="1:1" id="I6u-Cd-JCp"/>
                                     <constraint firstAttribute="height" constant="60" id="Lal-pz-JG7"/>
@@ -995,7 +997,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-P3-peS">
-                                <rect key="frame" x="2" y="570" width="60" height="60"/>
+                                <rect key="frame" x="2" y="639" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="LoU-Jt-UvE"/>
                                     <constraint firstAttribute="width" secondItem="2aW-P3-peS" secondAttribute="height" multiplier="1:1" id="Ysu-e4-I01"/>
@@ -1008,7 +1010,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-ET-GDk">
-                                <rect key="frame" x="175" y="366" width="29" height="21"/>
+                                <rect key="frame" x="194.66666666666666" y="435" width="29" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="29" id="7v5-7U-EKe"/>
                                     <constraint firstAttribute="height" constant="21" id="GP1-9j-I1i"/>
@@ -1018,7 +1020,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR9-eX-Ngy">
-                                <rect key="frame" x="45" y="442" width="48" height="41"/>
+                                <rect key="frame" x="45" y="511" width="48" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kR9-eX-Ngy" secondAttribute="height" multiplier="48:41" id="9OU-AI-0i2"/>
                                     <constraint firstAttribute="height" constant="41" id="auI-uv-WMc"/>
@@ -1029,7 +1031,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stand by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8js-E0-Dtc">
-                                <rect key="frame" x="36" y="89" width="304" height="43"/>
+                                <rect key="frame" x="55" y="89" width="304" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="czF-sr-JpS"/>
                                     <constraint firstAttribute="height" constant="43" id="hT8-aB-Qsg"/>
@@ -1040,7 +1042,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="min-IW-eWx">
-                                <rect key="frame" x="201" y="441" width="33" height="41"/>
+                                <rect key="frame" x="220" y="510" width="33" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="HJV-xT-TXb"/>
                                     <constraint firstAttribute="width" secondItem="min-IW-eWx" secondAttribute="height" multiplier="45:41" constant="-12" id="OtW-Xk-TdU"/>
@@ -1097,8 +1099,8 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                             <constraint firstItem="3Z9-w9-xOR" firstAttribute="top" secondItem="W5Q-cD-D05" secondAttribute="bottom" constant="33" id="dhE-aq-Q2z"/>
                             <constraint firstItem="AoP-iy-BFY" firstAttribute="leading" secondItem="To0-dy-Gix" secondAttribute="leadingMargin" constant="-19" id="dlD-b5-uuM"/>
                             <constraint firstItem="AoP-iy-BFY" firstAttribute="leading" secondItem="To0-dy-Gix" secondAttribute="leading" constant="1" id="egX-cg-KKn"/>
-                            <constraint firstItem="JvA-mu-P97" firstAttribute="top" secondItem="ZJ3-Uy-SJg" secondAttribute="bottom" id="gOv-dn-LiA"/>
-                            <constraint firstItem="JvA-mu-P97" firstAttribute="top" secondItem="iyz-Ny-0ex" secondAttribute="bottom" id="iGu-Ab-8bk"/>
+                            <constraint firstItem="JvA-mu-P97" firstAttribute="top" secondItem="ZJ3-Uy-SJg" secondAttribute="bottom" constant="-34" id="gOv-dn-LiA"/>
+                            <constraint firstItem="JvA-mu-P97" firstAttribute="top" secondItem="iyz-Ny-0ex" secondAttribute="bottom" constant="-34" id="iGu-Ab-8bk"/>
                             <constraint firstItem="riI-xd-PGP" firstAttribute="leading" secondItem="XST-Vc-XZn" secondAttribute="leading" id="jDv-5c-KbC"/>
                             <constraint firstItem="zDV-IG-vku" firstAttribute="top" secondItem="QVn-jj-k38" secondAttribute="bottom" constant="8" id="jmn-Re-kIC"/>
                             <constraint firstAttribute="trailing" secondItem="YxO-P5-2Hf" secondAttribute="trailing" constant="2" id="lDM-U1-edb"/>
@@ -1126,7 +1128,6 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                             <color key="tintColor" red="0.042770752820000001" green="1" blue="0.93783454450000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Time-64.png" style="plain" id="3cf-fh-cXs">
-                            <inset key="imageInsets" minX="30" minY="18" maxX="5" maxY="18"/>
                             <color key="tintColor" red="0.0" green="1" blue="1" alpha="0.56527478448275859" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -1155,20 +1156,20 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6N-Ft-7p3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-812" y="1687.1064467766118"/>
+            <point key="canvasLocation" x="-812" y="1686.9458128078818"/>
         </scene>
     </scenes>
     <resources>
         <image name="Play.png" width="100" height="100"/>
-        <image name="Time-64.png" width="64" height="64"/>
+        <image name="Time-64.png" width="32" height="32"/>
         <image name="add1m.png" width="46" height="50"/>
         <image name="autoSwitch.png" width="50" height="50"/>
         <image name="feedback.png" width="100" height="100"/>
-        <image name="gradient4.jpg" width="1024" height="1024"/>
         <image name="help image.png" width="784" height="1575"/>
         <image name="highVolume.png" width="100" height="100"/>
         <image name="hour.png" width="1536" height="1536"/>
         <image name="lowVolume.png" width="100" height="100"/>
+        <image name="mainbackground" width="1088" height="1631"/>
         <image name="menu.png" width="20" height="20"/>
         <image name="next.png" width="50" height="50"/>
         <image name="rate.png" width="100" height="100"/>
@@ -1177,10 +1178,10 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
         <image name="stop.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h96-k6-fdo"/>
         <segue reference="Gyj-dg-ncg"/>
         <segue reference="C9B-uO-o6f"/>
         <segue reference="rlm-iR-K7L"/>
+        <segue reference="h96-k6-fdo"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="1" blue="1" alpha="0.65441810339999995" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
