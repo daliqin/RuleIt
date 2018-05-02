@@ -201,7 +201,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         let minutes : Int = secondCountdown / 60
         let seconds : Int = secondCountdown - (minutes * 60)
         if minutes + seconds != 0 {
-            let timerOutlet : String = String(format: "%02d:%02d", minutes, seconds)
+            let timerOutlet : String = String(format: "%02d : %02d", minutes, seconds)
             timer.text = timerOutlet
         }
         myAppDelegate.autoSwitch = autoSwitch
@@ -231,7 +231,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
                 status.textColor = UIColor.yellow
                 status.alpha = 1
                 progressFull = true
-                timer.text = "00:00"
+                timer.text = "00 : 00"
                 plusOneMin.isEnabled = false
                 plusOneMin.alpha = 0.5
                 
@@ -270,7 +270,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         secondCountdown = Int(presetTime)                                           // counter uses secondCountdown
         let minutes = secondCountdown / 60
         let seconds = secondCountdown - (minutes * 60)
-        let timerOutlet : String = String(format: "%02d:%02d", minutes, seconds)
+        let timerOutlet : String = String(format: "%02d : %02d", minutes, seconds)
         timer.text = timerOutlet
 
         // mini label update
@@ -282,9 +282,9 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         let miniWorkSec = miniWTCountdown - (miniWorkMin * 60)
         let miniRestMin = miniRTCountdown / 60
         let miniRestSec = miniRTCountdown - (miniRestMin * 60)
-        let miniWorkTimerOutlet = String(format: "W %02d:%02d", miniWorkMin, miniWorkSec)
+        let miniWorkTimerOutlet = String(format: "W  %02d : %02d", miniWorkMin, miniWorkSec)
         worktimeLabel.text = miniWorkTimerOutlet
-        let miniRestTimerOutlet = String(format: "R %02d:%02d", miniRestMin, miniRestSec)
+        let miniRestTimerOutlet = String(format: "R  %02d : %02d", miniRestMin, miniRestSec)
         resttimeLabel.text = miniRestTimerOutlet
     }
     
@@ -294,7 +294,7 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
         self.progressBar.setProgress(progress, animated: true)
         let minutes = secondCountdown / 60
         let seconds = secondCountdown - (minutes * 60)
-        let timerOutlet : String = String(format: "%02d:%02d", minutes, seconds)
+        let timerOutlet : String = String(format: "%02d : %02d", minutes, seconds)
         timer.text = timerOutlet
     }
     

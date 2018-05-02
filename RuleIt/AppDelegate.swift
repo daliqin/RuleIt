@@ -73,6 +73,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Thread.sleep(forTimeInterval: 1.2);
         
         Fabric.with([Crashlytics.self])
+        
+        for family: String in UIFont.familyNames
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                print("== \(names) haha")
+            }
+        }
 
         return true ///
 

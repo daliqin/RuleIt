@@ -19,6 +19,12 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @IBOutlet weak var restTimePicker: UIPickerView!
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var headsupMsg: UILabel!
+    @IBOutlet weak var hrUpper: UILabel!
+    @IBOutlet weak var minUpper: UILabel!
+    @IBOutlet weak var secUpper: UILabel!
+    @IBOutlet weak var hrLower: UILabel!
+    @IBOutlet weak var minLower: UILabel!
+    @IBOutlet weak var secLower: UILabel!
     
     var delegate:DataDelegate? = nil
     
@@ -48,6 +54,13 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
         restTimePicker.delegate = self
         restTimePicker.dataSource = self
+        
+        workTimePicker.setPickerLabels(labels: [0: hrUpper], containedView: workTimePicker)
+        workTimePicker.setPickerLabels(labels: [1: minUpper], containedView: workTimePicker)
+        workTimePicker.setPickerLabels(labels: [2: secUpper], containedView: workTimePicker)
+        restTimePicker.setPickerLabels(labels: [0: hrLower], containedView: restTimePicker)
+        restTimePicker.setPickerLabels(labels: [1: minLower], containedView: restTimePicker)
+        restTimePicker.setPickerLabels(labels: [2: secLower], containedView: restTimePicker)
         
         if UserDefaults.standard.object(forKey: "workTime") != nil {
             
@@ -186,7 +199,7 @@ class RightViewVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
        
         let pickerLabel = UILabel()
         pickerLabel.textColor = UIColor.white
-        pickerLabel.font = UIFont(name: "Digital dream Fat Skew", size: 21)
+        pickerLabel.font = UIFont(name: "001 Interstellar Log", size: 21)
         pickerLabel.textAlignment = NSTextAlignment.center
         
         if component == 0 {

@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>3</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -42,6 +42,7 @@
 	<string>Used to display instructions</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Interstellar Log.ttf</string>
 		<string>DIGITALDREAMFATSKEW.ttf</string>
 		<string>DIGITALDREAMFAT.ttf</string>
 		<string>digital-7 (mono).ttf</string>

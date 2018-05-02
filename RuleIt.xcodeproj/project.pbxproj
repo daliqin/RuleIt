@@ -73,8 +73,12 @@
 		36C4756C1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756A1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf */; };
 		36C4756D1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */; };
 		4749EEA0AC05E5609239CAE4 /* Pods_RuleIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD66E229FA98E9C85CB2E4C6 /* Pods_RuleIt.framework */; };
+		D615FE102097F67E00E93859 /* Interstellar Log.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D615FE0F2097F67C00E93859 /* Interstellar Log.ttf */; };
+		D615FE122097F84300E93859 /* Interstellar Log.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D615FE112097F84300E93859 /* Interstellar Log.ttf */; };
+		D641205E2099CC430006DB3C /* cheat sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = D641205D2099CC3F0006DB3C /* cheat sheet.png */; };
 		D67B4C841E70D9F5009550DE /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = D67B4C831E70D9F5009550DE /* hour.png */; };
 		D67B4C8C1E71E1EA009550DE /* gradient4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D67B4C891E71E1EA009550DE /* gradient4.jpg */; };
+		D6866877209928E900BDDEC2 /* PickerLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6866876209928E900BDDEC2 /* PickerLabels.swift */; };
 		D68F78991E7C5FD5003087C9 /* help image.png in Resources */ = {isa = PBXBuildFile; fileRef = D68F78981E7C5FD5003087C9 /* help image.png */; };
 		D68F789B1E7C6C9C003087C9 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D68F789A1E7C6C9C003087C9 /* chime.mp3 */; };
 		D6EFBF661FBE4FF000B7358B /* complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6EFBF651FBE4CCD00B7358B /* complete.wav */; };
@@ -141,7 +145,7 @@
 		2BFEAAF31D1874FB004E316D /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		2BFEAAF51D188EBC004E316D /* Timeguru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timeguru.png; sourceTree = "<group>"; };
 		360EA5021CBEECA800394402 /* skip colored.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skip colored.png"; sourceTree = "<group>"; };
-		363E3BA11CAC4F6800ECAAB9 /* Hour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		363E3BA11CAC4F6800ECAAB9 /* HourGlass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HourGlass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		363E3BA41CAC4F6800ECAAB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		363E3BA61CAC4F6800ECAAB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		363E3BA91CAC4F6800ECAAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,12 +172,16 @@
 		36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DIGITALDREAMFATSKEW.ttf; sourceTree = "<group>"; };
 		4BCF8D96A6CEC6EFC51521B6 /* Pods-RuleIt.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.distribution.xcconfig"; sourceTree = "<group>"; };
 		4D75911BDB18911EDDAD3477 /* Pods-RuleIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.release.xcconfig"; sourceTree = "<group>"; };
+		D615FE0F2097F67C00E93859 /* Interstellar Log.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstellar Log.ttf"; sourceTree = "<group>"; };
+		D615FE112097F84300E93859 /* Interstellar Log.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstellar Log.ttf"; sourceTree = "<group>"; };
+		D641205D2099CC3F0006DB3C /* cheat sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cheat sheet.png"; sourceTree = "<group>"; };
 		D6481D011FBB9B9B00B6C356 /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
 		D6481D021FBB9B9C00B6C356 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		D6481D031FBB9B9C00B6C356 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
 		D6481D041FBB9B9C00B6C356 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		D67B4C831E70D9F5009550DE /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
 		D67B4C891E71E1EA009550DE /* gradient4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient4.jpg; sourceTree = "<group>"; };
+		D6866876209928E900BDDEC2 /* PickerLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerLabels.swift; sourceTree = "<group>"; };
 		D68F78981E7C5FD5003087C9 /* help image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help image.png"; sourceTree = "<group>"; };
 		D68F789A1E7C6C9C003087C9 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		D6EFBF651FBE4CCD00B7358B /* complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = complete.wav; sourceTree = "<group>"; };
@@ -219,6 +227,7 @@
 		363E3B981CAC4F6800ECAAB9 = {
 			isa = PBXGroup;
 			children = (
+				D615FE112097F84300E93859 /* Interstellar Log.ttf */,
 				363E3BA31CAC4F6800ECAAB9 /* RuleIt */,
 				363E3BA21CAC4F6800ECAAB9 /* Products */,
 				50C12BDBFCE891EDA15D620E /* Pods */,
@@ -229,7 +238,7 @@
 		363E3BA21CAC4F6800ECAAB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				363E3BA11CAC4F6800ECAAB9 /* Hour.app */,
+				363E3BA11CAC4F6800ECAAB9 /* HourGlass.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 				2BF4F31D1D25CA8A00F59C86 /* CustomCoachMarkBodyView.swift */,
 				2BF4F3201D25CBB400F59C86 /* TransparentCoachMarkArrowView.swift */,
 				2BF4F3211D25CBB500F59C86 /* TransparentCoachMarkBodyView.swift */,
+				D6866876209928E900BDDEC2 /* PickerLabels.swift */,
 				363E3BA81CAC4F6800ECAAB9 /* Main.storyboard */,
 				3680D4D61CB5A28900C55381 /* RuleIt-Bridging-Header.h */,
 				363E3BB01CAC4F6800ECAAB9 /* LaunchScreen.storyboard */,
@@ -333,12 +343,14 @@
 				2B64768B1CF7BDCE0073C165 /* workDone.wav */,
 				2B6476871CF6737D0073C165 /* door.wav */,
 				2B6476891CF7BB7C0073C165 /* lowbeep.wav */,
+				D641205D2099CC3F0006DB3C /* cheat sheet.png */,
 				368327231CC6EDC2008013EA /* background.jpg */,
 				36C4756A1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf */,
 				36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */,
 				36C475681CBC66F400FCEB36 /* digital-7 (mono).ttf */,
 				36C475661CBC659300FCEB36 /* DIGITALDREAMFATNARROW.ttf */,
 				36C475641CBC64A200FCEB36 /* DIGITALDREAMNARROW.ttf */,
+				D615FE0F2097F67C00E93859 /* Interstellar Log.ttf */,
 				363E3BAE1CAC4F6800ECAAB9 /* Assets.xcassets */,
 				363E3BB31CAC4F6800ECAAB9 /* Info.plist */,
 				363E3BAB1CAC4F6800ECAAB9 /* RuleIt.xcdatamodeld */,
@@ -386,7 +398,7 @@
 			);
 			name = RuleIt;
 			productName = RuleIt;
-			productReference = 363E3BA11CAC4F6800ECAAB9 /* Hour.app */;
+			productReference = 363E3BA11CAC4F6800ECAAB9 /* HourGlass.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -401,7 +413,7 @@
 				TargetAttributes = {
 					363E3BA01CAC4F6800ECAAB9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = VYHG9U4J53;
+						DevelopmentTeam = GYMMFU2F5S;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -441,6 +453,7 @@
 				2B64768A1CF7BB7C0073C165 /* lowbeep.wav in Resources */,
 				36C475691CBC66F400FCEB36 /* digital-7 (mono).ttf in Resources */,
 				36C475671CBC659300FCEB36 /* DIGITALDREAMFATNARROW.ttf in Resources */,
+				D615FE122097F84300E93859 /* Interstellar Log.ttf in Resources */,
 				2BBC42831D25F355004E8B91 /* feedback.png in Resources */,
 				36C475651CBC64A200FCEB36 /* DIGITALDREAMNARROW.ttf in Resources */,
 				360EA5031CBEECA800394402 /* skip colored.png in Resources */,
@@ -450,6 +463,7 @@
 				2BA4615F1D303AF600EDFF60 /* starLG.png in Resources */,
 				2B6476881CF6737D0073C165 /* door.wav in Resources */,
 				2B2F688E1CFF7DDB009FC076 /* play.png in Resources */,
+				D615FE102097F67E00E93859 /* Interstellar Log.ttf in Resources */,
 				D67B4C8C1E71E1EA009550DE /* gradient4.jpg in Resources */,
 				2B64768E1CF7BDDD0073C165 /* restDone.wav in Resources */,
 				D68F78991E7C5FD5003087C9 /* help image.png in Resources */,
@@ -475,6 +489,7 @@
 				2B64768C1CF7BDCE0073C165 /* workDone.wav in Resources */,
 				363E3BAF1CAC4F6800ECAAB9 /* Assets.xcassets in Resources */,
 				3680D4C71CB482A000C55381 /* menu.png in Resources */,
+				D641205E2099CC430006DB3C /* cheat sheet.png in Resources */,
 				2BBC42841D25F355004E8B91 /* rate.png in Resources */,
 				2B3E89B41D0B8F2600D31FED /* tutorial.PNG in Resources */,
 				363E3BAA1CAC4F6800ECAAB9 /* Main.storyboard in Resources */,
@@ -577,6 +592,7 @@
 				363E3BC21CAC929000ECAAB9 /* Feedback.swift in Sources */,
 				363E3BC41CAC969A00ECAAB9 /* RightViewVC.swift in Sources */,
 				363E3BBC1CAC7FA400ECAAB9 /* SWRevealViewController.m in Sources */,
+				D6866877209928E900BDDEC2 /* PickerLabels.swift in Sources */,
 				2BF4F31E1D25CA8A00F59C86 /* CustomCoachMarkArrowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,7 +669,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = VYHG9U4J53;
+				DEVELOPMENT_TEAM = GYMMFU2F5S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -663,7 +679,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = Hour;
+				PRODUCT_NAME = HourGlass;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
@@ -769,7 +785,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = VYHG9U4J53;
+				DEVELOPMENT_TEAM = GYMMFU2F5S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -779,7 +795,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = Hour;
+				PRODUCT_NAME = HourGlass;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";
@@ -799,7 +815,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = VYHG9U4J53;
+				DEVELOPMENT_TEAM = GYMMFU2F5S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -809,7 +825,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruleit.RuleIt;
-				PRODUCT_NAME = Hour;
+				PRODUCT_NAME = HourGlass;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuleIt/RuleIt-Bridging-Header.h";

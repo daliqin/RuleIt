@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PGD-30-dL2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PGD-30-dL2">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -13,11 +13,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="DIGITALDREAMFAT.ttf">
-            <string>DigitaldreamFat</string>
-        </array>
-        <array key="DIGITALDREAMFATSKEW.ttf">
-            <string>DigitaldreamFatSkew</string>
+        <array key="Interstellar Log.ttf">
+            <string>001InterstellarLog</string>
         </array>
         <array key="Menlo.ttc">
             <string>Menlo-Regular</string>
@@ -69,7 +66,7 @@
         <!--Back TableVC-->
         <scene sceneID="lai-uB-zvn">
             <objects>
-                <tableViewController id="hhz-VA-cw5" customClass="BackTableVC" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hhz-VA-cw5" customClass="BackTableVC" customModule="HourGlass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="w7U-Rb-8aO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +128,7 @@
         <!--Right ViewVC-->
         <scene sceneID="SJx-IQ-f7c">
             <objects>
-                <viewController storyboardIdentifier="rightVC" id="H84-pY-5ZX" customClass="RightViewVC" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightVC" id="H84-pY-5ZX" customClass="RightViewVC" customModule="HourGlass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nDR-cN-7zH"/>
                         <viewControllerLayoutGuide type="bottom" id="vbe-qR-euv"/>
@@ -156,48 +153,88 @@
                                             <outlet property="delegate" destination="H84-pY-5ZX" id="zy1-16-HoE"/>
                                         </connections>
                                     </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-IX-0Sf">
-                                        <rect key="frame" x="105.33333333333331" y="37.666666666666671" width="249" height="55.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-IX-0Sf">
+                                        <rect key="frame" x="106.33333333333331" y="37.666666666666671" width="247" height="55.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="4ns-pQ-Ncp"/>
                                             <constraint firstAttribute="width" constant="247" id="d1K-pt-8PK"/>
-                                            <constraint firstAttribute="width" secondItem="sTL-IX-0Sf" secondAttribute="height" multiplier="247:55" id="tHT-Vh-6go"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="20"/>
-                                        <color key="textColor" red="0.14031926219999999" green="0.99037980589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Working Time">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.14031926219999999" green="0.99037980589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="24" name="001InterstellarLog"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Hr     Min     Sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-xf-jmE">
-                                        <rect key="frame" x="154" y="162.33333333333334" width="247" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="247" id="7xM-iG-jRv"/>
-                                            <constraint firstAttribute="height" constant="55" id="UXS-ms-jCp"/>
-                                            <constraint firstAttribute="width" secondItem="mLc-xf-jmE" secondAttribute="height" multiplier="247:55" id="vnA-Ii-vld"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-xf-jmE">
+                                        <rect key="frame" x="154" y="162" width="33" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="HR">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stop timer to adjust time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8s-ar-vqM">
-                                        <rect key="frame" x="118.33333333333331" y="343.66666666666669" width="240" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4f-xn-dfE">
+                                        <rect key="frame" x="221" y="162" width="33" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="MIN">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8s-ar-vqM">
+                                        <rect key="frame" x="90.666666666666657" y="338.66666666666669" width="293.66666666666674" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="h8s-ar-vqM" secondAttribute="height" multiplier="337:31" constant="-42.645161290322562" id="CmD-N7-QWJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="stop timer to adjust time">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-Jg-iJh">
+                                        <rect key="frame" x="285" y="162" width="33" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="SEC">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="mLc-xf-jmE" firstAttribute="top" secondItem="sTL-IX-0Sf" secondAttribute="bottom" constant="79" id="2cZ-Dg-2dg"/>
                                     <constraint firstItem="h8s-ar-vqM" firstAttribute="centerX" secondItem="azC-xd-V5A" secondAttribute="centerX" constant="30.5" id="AdL-vg-vDO"/>
-                                    <constraint firstItem="mLc-xf-jmE" firstAttribute="centerX" secondItem="azC-xd-V5A" secondAttribute="centerX" constant="51" id="H02-k1-JGo"/>
-                                    <constraint firstItem="mLc-xf-jmE" firstAttribute="top" secondItem="muQ-xO-EOv" secondAttribute="bottom" constant="-149" id="QFK-go-hlZ"/>
                                     <constraint firstAttribute="trailing" secondItem="muQ-xO-EOv" secondAttribute="trailing" constant="13" id="Wrw-Rv-dAm"/>
                                     <constraint firstItem="muQ-xO-EOv" firstAttribute="centerY" secondItem="azC-xd-V5A" secondAttribute="centerY" constant="5" id="acO-Wy-Qnk"/>
                                     <constraint firstAttribute="bottom" secondItem="h8s-ar-vqM" secondAttribute="bottom" id="mMI-dq-wPj"/>
-                                    <constraint firstAttribute="trailing" secondItem="mLc-xf-jmE" secondAttribute="trailing" constant="13" id="nKk-oa-2sr"/>
                                     <constraint firstItem="muQ-xO-EOv" firstAttribute="top" secondItem="sTL-IX-0Sf" secondAttribute="bottom" constant="-25" id="t0M-hd-ovJ"/>
                                     <constraint firstItem="sTL-IX-0Sf" firstAttribute="centerX" secondItem="azC-xd-V5A" secondAttribute="centerX" constant="22" id="vbe-Iq-QkW"/>
                                     <constraint firstItem="muQ-xO-EOv" firstAttribute="centerX" secondItem="azC-xd-V5A" secondAttribute="centerX" constant="21.5" id="xsT-JO-SIl"/>
@@ -205,12 +242,11 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Wrw-Rv-dAm"/>
-                                        <exclude reference="2cZ-Dg-2dg"/>
                                     </mask>
                                 </variation>
                             </view>
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfc-I5-3GI">
-                                <rect key="frame" x="79.666666666666686" y="418.66666666666663" width="306" height="242.99999999999989"/>
+                                <rect key="frame" x="79.666666666666686" y="418.66666666666674" width="306" height="243"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="243" id="NfB-Dz-aTD"/>
@@ -230,26 +266,64 @@
                                     <outlet property="delegate" destination="H84-pY-5ZX" id="TFv-l3-itb"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Hr     Min     Sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-2V-H38">
-                                <rect key="frame" x="158" y="512.66666666666663" width="247" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="4TP-4W-b3u"/>
-                                    <constraint firstAttribute="width" constant="247" id="8Xj-uH-a5W"/>
-                                    <constraint firstAttribute="width" secondItem="xzo-2V-H38" secondAttribute="height" multiplier="247:55" id="nZd-ui-80C"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzo-2V-H38">
+                                <rect key="frame" x="141" y="513" width="44" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="HR">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resting Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-UO-AKV">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwh-wk-Ll7">
+                                <rect key="frame" x="211" y="513" width="44" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="MIN">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2W-II-VPP">
+                                <rect key="frame" x="279" y="513" width="44" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SEC">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-UO-AKV">
                                 <rect key="frame" x="109.66666666666669" y="378.66666666666669" width="247" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Bw-UO-AKV" secondAttribute="height" multiplier="247:55" id="akp-q4-1dx"/>
                                     <constraint firstAttribute="width" constant="247" id="dKl-To-g5O"/>
                                     <constraint firstAttribute="height" constant="55" id="evV-05-ORh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="20"/>
-                                <color key="textColor" red="0.14031926219999999" green="0.99037980589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Resting Time">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14031926219999999" green="0.99037980589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -257,7 +331,6 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cfc-I5-3GI" secondAttribute="trailing" constant="14" id="Gc1-OR-EdV"/>
                             <constraint firstItem="cfc-I5-3GI" firstAttribute="centerX" secondItem="KOm-cm-jqA" secondAttribute="centerX" constant="25.5" id="JrA-OQ-5na"/>
-                            <constraint firstItem="xzo-2V-H38" firstAttribute="centerX" secondItem="KOm-cm-jqA" secondAttribute="centerX" constant="55" id="TOW-eY-hlB"/>
                             <constraint firstItem="azC-xd-V5A" firstAttribute="leading" secondItem="KOm-cm-jqA" secondAttribute="leading" constant="1" id="TOp-9s-9zS"/>
                             <constraint firstItem="cfc-I5-3GI" firstAttribute="centerX" secondItem="KOm-cm-jqA" secondAttribute="centerX" constant="20.5" id="b9k-wc-Hsd"/>
                             <constraint firstItem="azC-xd-V5A" firstAttribute="centerX" secondItem="KOm-cm-jqA" secondAttribute="centerX" constant="1" id="iNE-gf-JCT"/>
@@ -266,9 +339,7 @@
                             <constraint firstItem="azC-xd-V5A" firstAttribute="top" secondItem="KOm-cm-jqA" secondAttribute="top" constant="-1" id="knT-Xr-6Uc"/>
                             <constraint firstItem="azC-xd-V5A" firstAttribute="height" secondItem="KOm-cm-jqA" secondAttribute="height" multiplier="0.5" constant="1.5" id="oHx-Xb-BH2"/>
                             <constraint firstAttribute="trailing" secondItem="azC-xd-V5A" secondAttribute="trailing" constant="-1" id="rSk-3s-hPE"/>
-                            <constraint firstAttribute="trailing" secondItem="xzo-2V-H38" secondAttribute="trailing" constant="9" id="re8-H3-3rx"/>
                             <constraint firstItem="3Bw-UO-AKV" firstAttribute="top" secondItem="azC-xd-V5A" secondAttribute="bottom" constant="10" id="yMo-pV-EC5"/>
-                            <constraint firstItem="xzo-2V-H38" firstAttribute="top" secondItem="3Bw-UO-AKV" secondAttribute="bottom" constant="79" id="yns-OM-zga"/>
                             <constraint firstAttribute="trailing" secondItem="cfc-I5-3GI" secondAttribute="trailing" constant="9" id="zJ2-zl-kfi"/>
                         </constraints>
                         <variation key="default">
@@ -282,7 +353,13 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="headsupMsg" destination="h8s-ar-vqM" id="2mr-dr-zLJ"/>
+                        <outlet property="hrLower" destination="xzo-2V-H38" id="zc7-gk-cRJ"/>
+                        <outlet property="hrUpper" destination="mLc-xf-jmE" id="vN3-TF-ETS"/>
+                        <outlet property="minLower" destination="Jwh-wk-Ll7" id="R67-ap-n6s"/>
+                        <outlet property="minUpper" destination="W4f-xn-dfE" id="cDP-us-nki"/>
                         <outlet property="restTimePicker" destination="cfc-I5-3GI" id="Klr-WI-iE9"/>
+                        <outlet property="secLower" destination="b2W-II-VPP" id="CpP-Kw-zVE"/>
+                        <outlet property="secUpper" destination="6Xd-Jg-iJh" id="fTE-PK-YWT"/>
                         <outlet property="upperView" destination="azC-xd-V5A" id="T56-UX-wp3"/>
                         <outlet property="workTimePicker" destination="muQ-xO-EOv" id="ZIB-fK-LnJ"/>
                         <segue destination="yax-8t-Vm9" kind="custom" identifier="timerSet" customClass="SWRevealViewControllerSeguePushController" id="Gyj-dg-ncg"/>
@@ -290,12 +367,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WML-gG-UDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1707.5" y="547.5"/>
+            <point key="canvasLocation" x="1707.2463768115942" y="547.01086956521749"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GvJ-xH-tGo">
             <objects>
-                <tableViewController id="7Jk-eP-ehQ" customClass="Settings" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7Jk-eP-ehQ" customClass="Settings" customModule="HourGlass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="J3D-0w-xho">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,13 +399,19 @@
                                                         <action selector="btnSoundSwitch:" destination="7Jk-eP-ehQ" eventType="valueChanged" id="cFw-HV-2ib"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button sound effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkZ-jf-r5H">
-                                                    <rect key="frame" x="16" y="11" width="152" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkZ-jf-r5H">
+                                                    <rect key="frame" x="16" y="11" width="302" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="bkZ-jf-r5H" secondAttribute="height" multiplier="152:21" id="YPd-wF-2XF"/>
+                                                        <constraint firstAttribute="width" secondItem="bkZ-jf-r5H" secondAttribute="height" multiplier="152:21" constant="150" id="YPd-wF-2XF"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Button sound effect">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -350,13 +433,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen stays lit while running" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRl-re-MGv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRl-re-MGv">
                                                     <rect key="frame" x="15" y="11" width="223" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qRl-re-MGv" secondAttribute="height" multiplier="223:21" id="GqW-jm-tCO"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Screen stays lit">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-Rh-EtB">
@@ -389,14 +479,21 @@
                                         <rect key="frame" x="0.0" y="159" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vOI-R3-tPa" id="caP-IN-qNm">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Buttons cheatsheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7iV-Fb-Cou">
-                                                    <rect key="frame" x="20" y="0.0" width="359" height="43.666666666666664"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7iV-Fb-Cou">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Buttons cheatsheet">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -408,20 +505,27 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="version 3.0" id="Ouo-bA-Usn">
+                            <tableViewSection footerTitle="V 4.0" id="Ouo-bA-Usn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8zn-1B-eja" style="IBUITableViewCellStyleDefault" id="gsR-jS-EFT">
                                         <rect key="frame" x="0.0" y="239" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsR-jS-EFT" id="ihD-hC-lJU">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About Hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="8zn-1B-eja">
-                                                    <rect key="frame" x="20" y="0.0" width="359" height="43.666666666666664"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="8zn-1B-eja">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="About Hour">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
@@ -439,7 +543,7 @@
                             <outlet property="delegate" destination="7Jk-eP-ehQ" id="nqA-km-gnw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="avM-AA-nFB">
+                    <navigationItem key="navigationItem" id="avM-AA-nFB">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="fcQ-Zd-Sbc">
                             <color key="tintColor" red="0.042770752820000001" green="1" blue="0.93783454450000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -452,12 +556,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzi-nO-Bry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674.5" y="1688.5"/>
+            <point key="canvasLocation" x="673.91304347826087" y="1688.3152173913045"/>
         </scene>
-        <!--About Hour-->
+        <!--About-->
         <scene sceneID="ssA-ca-Wbo">
             <objects>
-                <viewController id="jcH-Bo-Cb0" customClass="about" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jcH-Bo-Cb0" customClass="about" customModule="HourGlass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qxL-KT-lYf"/>
                         <viewControllerLayoutGuide type="bottom" id="gzb-3D-X4Z"/>
@@ -475,29 +579,63 @@
                                     <constraint firstAttribute="height" constant="65" id="uLY-71-IUK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 3.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf3-a5-gxK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf3-a5-gxK">
                                 <rect key="frame" x="164" y="190" width="86" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="2AV-il-MYl"/>
                                     <constraint firstAttribute="width" secondItem="mf3-a5-gxK" secondAttribute="height" multiplier="86:21" id="7Fc-aA-22F"/>
                                     <constraint firstAttribute="height" constant="21" id="z8H-4V-et6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.80856699486301364" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Version 4.0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.80856699486301364" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="10" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-Y2-ApZ">
-                                <rect key="frame" x="52.666666666666657" y="219" width="309" height="249"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-Y2-ApZ">
+                                <rect key="frame" x="53" y="235" width="309" height="318"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="BWM-GW-doG"/>
-                                    <constraint firstAttribute="width" secondItem="Sbe-Y2-ApZ" secondAttribute="height" multiplier="103:83" id="CnX-Os-TbH"/>
-                                    <constraint firstAttribute="height" constant="249" id="oyv-DF-RQA"/>
+                                    <constraint firstAttribute="width" secondItem="Sbe-Y2-ApZ" secondAttribute="height" multiplier="103:83" constant="-85.626506024096443" id="CnX-Os-TbH"/>
+                                    <constraint firstAttribute="height" constant="318" id="oyv-DF-RQA"/>
                                 </constraints>
-                                <string key="text">The app is developed with one principle in mind - to make interval timer elegant and simple to use. 
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Thisapp is made
+ with one principle in mind
+ 
 
-Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle, USA. Reach out to him for improvement suggestions at: DCharlesChin@yahoo.com</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.80856699489999995" colorSpace="custom" customColorSpace="sRGB"/>
+to make interval timer
+ elegant and simple to use
+
+
+
+
+.
+ d</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99509803921568629" green="0.99019607843137258" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" red="0.99509803921568629" green="0.99019607843137258" blue="1" alpha="0.80856699486301364" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="15" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">eveloped by
+Dali Charles Qin </string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.99509803921568629" green="0.99019607843137258" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="NSColor" red="0.99509803921568629" green="0.99019607843137258" blue="1" alpha="0.80856699486301364" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="11" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -507,15 +645,15 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                             <constraint firstItem="Sbe-Y2-ApZ" firstAttribute="centerX" secondItem="dc1-JW-ycb" secondAttribute="centerX" id="6lj-yP-wpz"/>
                             <constraint firstItem="BnP-LO-U47" firstAttribute="centerX" secondItem="dc1-JW-ycb" secondAttribute="centerX" id="OQy-qg-n7k"/>
                             <constraint firstItem="mf3-a5-gxK" firstAttribute="top" secondItem="BnP-LO-U47" secondAttribute="bottom" constant="8" id="PHB-Uo-XEi"/>
-                            <constraint firstItem="Sbe-Y2-ApZ" firstAttribute="top" secondItem="mf3-a5-gxK" secondAttribute="bottom" constant="8" id="Xz0-op-h6m"/>
+                            <constraint firstItem="Sbe-Y2-ApZ" firstAttribute="top" secondItem="mf3-a5-gxK" secondAttribute="bottom" constant="24" id="Xz0-op-h6m"/>
                             <constraint firstItem="mf3-a5-gxK" firstAttribute="centerX" secondItem="dc1-JW-ycb" secondAttribute="centerX" id="ikS-RU-tc1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About Hour" id="O3D-Y1-8ry"/>
+                    <navigationItem key="navigationItem" id="O3D-Y1-8ry"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfV-zd-ERW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674.39999999999998" y="2535.3823088455774"/>
+            <point key="canvasLocation" x="672.46376811594212" y="2535.326086956522"/>
         </scene>
         <!--Help-->
         <scene sceneID="bPJ-9G-JRE">
@@ -529,7 +667,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help image.png" translatesAutoresizingMaskIntoConstraints="NO" id="UG8-7E-1Zn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheat sheet.png" translatesAutoresizingMaskIntoConstraints="NO" id="UG8-7E-1Zn">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </imageView>
                         </subviews>
@@ -563,10 +701,10 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
             </objects>
             <point key="canvasLocation" x="1395.5" y="1682.5"/>
         </scene>
-        <!--ACTION-->
+        <!--Action-->
         <scene sceneID="vKT-TK-q2z">
             <objects>
-                <tableViewController storyboardIdentifier="action" id="ePB-HH-X6U" customClass="Action" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="action" id="ePB-HH-X6U" customClass="Action" customModule="HourGlass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Txv-G4-5JH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,20 +721,27 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjT-XU-x0E">
-                                                    <rect key="frame" x="69.666666666666686" y="99.333333333333343" width="275" height="35.000000000000028"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WjT-XU-x0E">
+                                                    <rect key="frame" x="69.666666666666686" y="99.333333333333329" width="275" height="34.999999999999986"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="2BY-Zs-45q"/>
                                                         <constraint firstAttribute="width" secondItem="WjT-XU-x0E" secondAttribute="height" multiplier="92:15" constant="60.333333333333314" id="3EE-sm-3lf"/>
                                                         <constraint firstAttribute="width" constant="275" id="LhQ-xk-ohZ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Your opinion matters">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Give us feedback">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="21" name="001InterstellarLog"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                     </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback.png" translatesAutoresizingMaskIntoConstraints="NO" id="mFi-Wz-ykW">
-                                                    <rect key="frame" x="187" y="51.333333333333329" width="40" height="39.999999999999986"/>
+                                                    <rect key="frame" x="187" y="51.333333333333343" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="cWc-V8-p51"/>
                                                         <constraint firstAttribute="width" constant="40" id="rgR-Od-s9P"/>
@@ -621,23 +766,30 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-dV-pAG">
-                                                    <rect key="frame" x="187" y="59.666666666666671" width="40" height="40.000000000000014"/>
+                                                    <rect key="frame" x="187" y="59.666666666666657" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="QpT-dV-pAG" secondAttribute="height" multiplier="1:1" id="Gxk-qa-Cvw"/>
                                                         <constraint firstAttribute="width" constant="40" id="Xf1-RR-yQ0"/>
                                                         <constraint firstAttribute="height" constant="40" id="zGP-IQ-8dz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hII-im-KNb">
-                                                    <rect key="frame" x="67.666666666666686" y="107.66666666666666" width="279" height="34.999999999999972"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hII-im-KNb">
+                                                    <rect key="frame" x="67.666666666666686" y="107.66666666666667" width="279" height="35.000000000000014"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="279" id="2Wx-fu-QxN"/>
                                                         <constraint firstAttribute="height" constant="35" id="Xra-6a-z4b"/>
                                                         <constraint firstAttribute="width" secondItem="hII-im-KNb" secondAttribute="height" multiplier="217:30" constant="25.833333333333343" id="mpE-Gx-9OY"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Tell a friend about this app">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Share this app">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="21" name="001InterstellarLog"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -657,16 +809,23 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-FV-WDs">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-FV-WDs">
                                                     <rect key="frame" x="67.666666666666686" y="107" width="279" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Hmv-aD-jdz"/>
                                                         <constraint firstAttribute="width" secondItem="Bm5-FV-WDs" secondAttribute="height" multiplier="199:30" constant="46.833333333333314" id="SSY-XN-RMv"/>
                                                         <constraint firstAttribute="width" constant="279" id="Uqk-4t-1kf"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <state key="normal" title="Give a rating on App Store">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Rate us">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="21" name="001InterstellarLog"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                     </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rate.png" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-DU-0WP">
@@ -747,7 +906,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                             <outlet property="delegate" destination="ePB-HH-X6U" id="f6N-Zf-ZaJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ACTION" id="JT4-PD-oia">
+                    <navigationItem key="navigationItem" id="JT4-PD-oia">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="8t2-7M-1rd">
                             <color key="tintColor" red="0.042770752820000001" green="1" blue="0.93783454450000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -784,7 +943,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
         <!--View Controller-->
         <scene sceneID="tLe-H8-cfj">
             <objects>
-                <viewController id="yax-8t-Vm9" customClass="ViewController" customModule="Hour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yax-8t-Vm9" customClass="ViewController" customModule="HourGlass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kjJ-im-zSb"/>
                         <viewControllerLayoutGuide type="bottom" id="JvA-mu-P97"/>
@@ -823,9 +982,9 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-iy-BFY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 : 54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-iy-BFY">
                                 <rect key="frame" x="1" y="64" width="414" height="431"/>
-                                <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="74"/>
+                                <fontDescription key="fontDescription" name="001InterstellarLog" family="001 Interstellar Log" pointSize="74"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.083584415303873255" green="0.20824079949238583" blue="0.19929944033514141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -888,23 +1047,37 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                     <action selector="skipRestBtnAction:" destination="yax-8t-Vm9" eventType="touchUpInside" id="cq6-xq-dEA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R 15:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT5-pA-770">
-                                <rect key="frame" x="234.66666666666669" y="431" width="130.00000000000006" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT5-pA-770">
+                                <rect key="frame" x="234.66666666666663" y="431" width="130" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Ddh-S7-xN8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="17"/>
-                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="R  15 : 00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W 1:15:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5Q-cD-D05">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5Q-cD-D05">
                                 <rect key="frame" x="53.666666666666657" y="431" width="130" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="CD3-kk-HMR"/>
                                     <constraint firstAttribute="height" constant="29" id="FZd-dA-XXy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="17"/>
-                                <color key="textColor" red="0.19315293089999999" green="0.96822176869999999" blue="0.98106676339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="W  1 : 15 : 00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19315293089999999" green="0.96822176869999999" blue="0.98106676339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="3Z9-w9-xOR">
@@ -913,31 +1086,43 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <color key="progressTintColor" red="0.19315293091146934" green="0.96822176866117848" blue="0.98106676340103149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="trackTintColor" red="0.06716887659251522" green="0.067833914974619325" blue="0.067833914974619325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-ca-LCo">
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-ca-LCo">
                                 <rect key="frame" x="20" y="707" width="159" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PXI-ca-LCo" secondAttribute="height" multiplier="53:7" id="26j-kU-Tc8"/>
                                     <constraint firstAttribute="width" constant="159" id="dio-rd-Kf1"/>
                                     <constraint firstAttribute="height" constant="21" id="mUK-UT-a4T"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="15"/>
-                                <state key="normal" title="2:58 PM">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="2:58 PM">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="001InterstellarLog"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="currentTimeAction:" destination="yax-8t-Vm9" eventType="touchUpInside" id="cCx-xN-5W3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDV-IG-vku">
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDV-IG-vku">
                                 <rect key="frame" x="240" y="707" width="154" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6TF-F7-uGU"/>
                                     <constraint firstAttribute="width" constant="154" id="9Bi-ZS-Yh9"/>
                                     <constraint firstAttribute="width" secondItem="zDV-IG-vku" secondAttribute="height" multiplier="22:3" id="pe9-F2-ajs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFat" family="Digital dream Fat" pointSize="15"/>
-                                <state key="normal" title="APRIL 7">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="APRIL 7">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="001InterstellarLog"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="currentDateAction:" destination="yax-8t-Vm9" eventType="touchUpInside" id="ksZ-Ui-7oy"/>
@@ -972,7 +1157,7 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 </connections>
                             </button>
                             <slider opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uDY-NN-7ou">
-                                <rect key="frame" x="58" y="649.33333333333348" width="297" height="35.666666666666629"/>
+                                <rect key="frame" x="58" y="649.33333333333337" width="297" height="35.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uDY-NN-7ou" secondAttribute="height" multiplier="127:15" id="Inb-iM-HcM"/>
                                 </constraints>
@@ -1019,37 +1204,58 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR9-eX-Ngy">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR9-eX-Ngy">
                                 <rect key="frame" x="45" y="511" width="48" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kR9-eX-Ngy" secondAttribute="height" multiplier="48:41" id="9OU-AI-0i2"/>
                                     <constraint firstAttribute="height" constant="41" id="auI-uv-WMc"/>
                                     <constraint firstAttribute="width" constant="48" id="ftp-PK-6An"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="14"/>
-                                <color key="textColor" red="0.03187624948" green="0.95258962560000005" blue="0.48380671920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="+0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.03187624948" green="0.95258962560000005" blue="0.48380671920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stand by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8js-E0-Dtc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8js-E0-Dtc">
                                 <rect key="frame" x="55" y="89" width="304" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="czF-sr-JpS"/>
                                     <constraint firstAttribute="height" constant="43" id="hT8-aB-Qsg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="stand by">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="24" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="min-IW-eWx">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="min-IW-eWx">
                                 <rect key="frame" x="220" y="510" width="33" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="HJV-xT-TXb"/>
                                     <constraint firstAttribute="width" secondItem="min-IW-eWx" secondAttribute="height" multiplier="45:41" constant="-12" id="OtW-Xk-TdU"/>
                                     <constraint firstAttribute="height" constant="41" id="pAV-sI-BtY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DigitaldreamFatSkew" family="Digital dream Fat Skew" pointSize="14"/>
-                                <color key="textColor" red="0.03187624948" green="0.95258962560000005" blue="0.48380671920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.03187624948" green="0.95258962560000005" blue="0.48380671920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="001InterstellarLog"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1164,8 +1370,8 @@ Hour - the simple interval timer®, is developed by Dali Charles Qin in Seattle,
         <image name="Time-64.png" width="32" height="32"/>
         <image name="add1m.png" width="46" height="50"/>
         <image name="autoSwitch.png" width="50" height="50"/>
+        <image name="cheat sheet.png" width="724" height="1156"/>
         <image name="feedback.png" width="100" height="100"/>
-        <image name="help image.png" width="784" height="1575"/>
         <image name="highVolume.png" width="100" height="100"/>
         <image name="hour.png" width="1536" height="1536"/>
         <image name="lowVolume.png" width="100" height="100"/>

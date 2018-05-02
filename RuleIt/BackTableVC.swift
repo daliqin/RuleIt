@@ -20,6 +20,7 @@ class BackTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableArray[indexPath.row], for: indexPath) as UITableViewCell
         cell.textLabel?.text = tableArray[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "001 Interstellar Log", size: 10)
         cell.textLabel?.textColor = UIColor.white
         cell.selectionStyle = UITableViewCellSelectionStyle.gray
         cell.textLabel?.highlightedTextColor = UIColor.black
@@ -52,13 +53,13 @@ class BackTableVC: UITableViewController {
     
 // MARK: table view header
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "HO:UR"
+        return "HOURGLASS"
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let title = self.tableView(tableView, titleForHeaderInSection: section)
-        if (title == "HO:UR") {
-            return 45.0
+        if (title == "HOURGLASS") {
+            return 55.0
         }
         return 15.0
     }
@@ -66,7 +67,7 @@ class BackTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
         let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.font = UIFont(name: "Digital dream Fat", size: 14)!
+        header.textLabel?.font = UIFont(name: "001 Interstellar Log", size: 10)
     }
     
     func popAlertView(_ msgBody: String, identifier: String) {
