@@ -173,7 +173,7 @@
 		4BCF8D96A6CEC6EFC51521B6 /* Pods-RuleIt.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.distribution.xcconfig"; sourceTree = "<group>"; };
 		4D75911BDB18911EDDAD3477 /* Pods-RuleIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuleIt/Pods-RuleIt.release.xcconfig"; sourceTree = "<group>"; };
 		D615FE0F2097F67C00E93859 /* Interstellar Log.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstellar Log.ttf"; sourceTree = "<group>"; };
-		D615FE112097F84300E93859 /* Interstellar Log.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstellar Log.ttf"; sourceTree = "<group>"; };
+		D615FE112097F84300E93859 /* Interstellar Log.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Interstellar Log.ttf"; path = "../Interstellar Log.ttf"; sourceTree = "<group>"; };
 		D641205D2099CC3F0006DB3C /* cheat sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cheat sheet.png"; sourceTree = "<group>"; };
 		D6481D011FBB9B9B00B6C356 /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
 		D6481D021FBB9B9C00B6C356 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
@@ -227,7 +227,6 @@
 		363E3B981CAC4F6800ECAAB9 = {
 			isa = PBXGroup;
 			children = (
-				D615FE112097F84300E93859 /* Interstellar Log.ttf */,
 				363E3BA31CAC4F6800ECAAB9 /* RuleIt */,
 				363E3BA21CAC4F6800ECAAB9 /* Products */,
 				50C12BDBFCE891EDA15D620E /* Pods */,
@@ -253,14 +252,14 @@
 				363E3BC31CAC969A00ECAAB9 /* RightViewVC.swift */,
 				3680D4CA1CB493F500C55381 /* global.swift */,
 				2B2F68931CFFF649009FC076 /* Timer.swift */,
+				D6866876209928E900BDDEC2 /* PickerLabels.swift */,
+				3680D4D61CB5A28900C55381 /* RuleIt-Bridging-Header.h */,
+				363E3BA81CAC4F6800ECAAB9 /* Main.storyboard */,
+				363E3BB01CAC4F6800ECAAB9 /* LaunchScreen.storyboard */,
 				2BF4F31C1D25CA8A00F59C86 /* CustomCoachMarkArrowView.swift */,
 				2BF4F31D1D25CA8A00F59C86 /* CustomCoachMarkBodyView.swift */,
 				2BF4F3201D25CBB400F59C86 /* TransparentCoachMarkArrowView.swift */,
 				2BF4F3211D25CBB500F59C86 /* TransparentCoachMarkBodyView.swift */,
-				D6866876209928E900BDDEC2 /* PickerLabels.swift */,
-				363E3BA81CAC4F6800ECAAB9 /* Main.storyboard */,
-				3680D4D61CB5A28900C55381 /* RuleIt-Bridging-Header.h */,
-				363E3BB01CAC4F6800ECAAB9 /* LaunchScreen.storyboard */,
 				3680D4D81CB5A3A200C55381 /* SWReveal */,
 				3680D4A31CB460DF00C55381 /* Icons */,
 				3680D4D91CB5A3CA00C55381 /* Supporting files */,
@@ -344,6 +343,7 @@
 				2B6476871CF6737D0073C165 /* door.wav */,
 				2B6476891CF7BB7C0073C165 /* lowbeep.wav */,
 				D641205D2099CC3F0006DB3C /* cheat sheet.png */,
+				D615FE112097F84300E93859 /* Interstellar Log.ttf */,
 				368327231CC6EDC2008013EA /* background.jpg */,
 				36C4756A1CBC67BD00FCEB36 /* DIGITALDREAMFAT.ttf */,
 				36C4756B1CBC67BD00FCEB36 /* DIGITALDREAMFATSKEW.ttf */,

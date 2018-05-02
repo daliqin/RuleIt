@@ -68,12 +68,12 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     // instruction view
     let pointOfInterest = UIView()
     var coachMarksController: CoachMarksController?
-    let workTimeText = "Tap anywhere on screen for a 5 sec walk through! \n\nTimer runs between 2 modes:  \nworking 💪 and resting 😪. \n\nThis indicates your work duration, which can be changed later"
-    let restTimeText = "This is the rest-mode duration"
-    let addMinText = "In case you are running short on time but want to keep going, this adds minutes on the go!"
-    let autoSwitchText = "Switching this on will automatically transition between work & rest. Sweet!"
-    let skipRestText = "In case you want to skip the rest all together, enable this will keep your timer in working mode only."
-    let volumeControlText = "Button and the alert sound volume control. \nYou can turn off button sound effect in Settings. \n\nThat's it!! Thanks for trying out!!!🙌"
+    let workTimeText = "Work mode time indicator (W)"
+    let restTimeText = "Your resting time is here"
+    let addMinText = "Tap to adds minutes on the go, one at a time"
+    let autoSwitchText = "Auto-switch between the two timers"
+    let skipRestText = "Turn this on to stay in work mode"
+    let volumeControlText = "aaaaand your volume control. \n\nThat's it! Now go be productive!"
 
     //MARK:
     //MARK: LifeCycle & Notification
