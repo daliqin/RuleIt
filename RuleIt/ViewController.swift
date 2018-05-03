@@ -60,7 +60,6 @@ class ViewController: UIViewController,SWRevealViewControllerDelegate, CoachMark
     var oldStatusText = ""
     var isPausing = false
     var btnSoundEffect = true
-    var screenAlwaysLit = false
     let currCall = CTCallCenter()
     var autoSwitchInterval = 4
     var autoSwitchTimer : Foundation.Timer?

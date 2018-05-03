@@ -63,6 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey: "autoSwitchState")
         }
         
+        if UserDefaults.standard.object(forKey: "screenLitSwitchState") == nil {
+            UserDefaults.standard.set(true, forKey: "screenLitSwitchState")
+        }
+        
         if UserDefaults.standard.object(forKey: "volumeBar") == nil {
             UserDefaults.standard.set(0.5, forKey: "volumeBar")
         }
